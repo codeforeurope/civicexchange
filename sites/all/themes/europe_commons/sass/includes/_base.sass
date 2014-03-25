@@ -1,0 +1,66 @@
+////////////////////////
+// Global variables and imports for your project.
+////////////////////////
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat)
+
+////////////////////////
+// Variables:
+////////////////////////
+
+// Colors:
+$primary-color: black
+
+// You can organize hierarchically...
+$secondary-color: #dddddd
+$color-yellow: #F9E829
+$off-white: #fcf9f9
+
+// Or with memorable names...
+$light-blue: #f5fdfd
+$green: #8cc84b
+
+// Fonts:
+$base-font-size: 16px
+$body-font: Verdana, Tahoma, sans-serif
+$heading-font: 'Montserrat', Arial, Helvetica, sans-serif
+
+// Breakpoints:
+// Note: If you're using the Breakpoint mixin,
+// make sure to use the correct syntax: http://breakpoint-sass.com/
+$break-small: max-width 480px
+$break-medium: max-width 768px
+$break-large: max-width 980px
+
+////////////////////////
+// Vendor Settings:
+////////////////////////
+
+// Legacy IE Support For Compass:
+$legacy-support-for-ie6: false
+$legacy-support-for-ie7: false
+$legacy-support-for-ie8: true
+
+// Breakpoint:
+// $breakpoint-to-ems: true; // Uncomment if you want to convert all pixel breakpoints to ems.
+
+////////////////////////
+// Imports:
+////////////////////////
+
+// Vendor Imports:
+// @import compass
+
+// Suggested Plugin Imports:
+// Uncomment any of the import directives below
+// if you're requiring its plugin in config.rb.
+// @import "breakpoint";
+// @import "toolkit";
+
+// Bootstrap Variables:
+// This allows you to use Bootstrap's variables with your custom values
+// in your Sass code.
+@import ../../bootstrap/variables
+
+// Project Imports:
+@import ../components/all
