@@ -215,7 +215,9 @@
 </div>
 
 <div id="footer" class="">
-  <?php print render($page['footer']); ?>
+  <div class="container">
+    <?php print render($page['footer']); ?>
+  </div<
 </div>
 
 </div> <!-- /#page, /#page-wrapper -->
