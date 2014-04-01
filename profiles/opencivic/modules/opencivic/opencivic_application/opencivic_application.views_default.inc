@@ -34,10 +34,10 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   /* Field: Content: Application function */
-  $handler->display->display_options['fields']['field_oc_app_app_category']['id'] = 'field_oc_app_app_category';
-  $handler->display->display_options['fields']['field_oc_app_app_category']['table'] = 'field_data_field_oc_app_app_category';
-  $handler->display->display_options['fields']['field_oc_app_app_category']['field'] = 'field_oc_app_app_category';
-  $handler->display->display_options['fields']['field_oc_app_app_category']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_oc_app_category']['id'] = 'field_oc_app_category';
+  $handler->display->display_options['fields']['field_oc_app_category']['table'] = 'field_data_field_oc_app_category';
+  $handler->display->display_options['fields']['field_oc_app_category']['field'] = 'field_oc_app_category';
+  $handler->display->display_options['fields']['field_oc_app_category']['delta_offset'] = '0';
   /* Field: Content: Civic sector */
   $handler->display->display_options['fields']['field_oc_civic_category']['id'] = 'field_oc_civic_category';
   $handler->display->display_options['fields']['field_oc_civic_category']['table'] = 'field_data_field_oc_civic_category';
@@ -101,12 +101,12 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['fields']['field_oc_app_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_oc_app_url']['click_sort_column'] = 'url';
   /* Field: Content: Rating */
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['id'] = 'field_oc_app_aggregate_rating';
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['table'] = 'field_data_field_oc_app_aggregate_rating';
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['field'] = 'field_oc_app_aggregate_rating';
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['click_sort_column'] = 'rating';
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['settings'] = array(
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['id'] = 'field_oc_aggregate_rating';
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['table'] = 'field_data_field_oc_aggregate_rating';
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['field'] = 'field_oc_aggregate_rating';
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['click_sort_column'] = 'rating';
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['settings'] = array(
     'widget' => array(
       'fivestar_widget' => 'profiles/opencivic/modules/custom/fivestar_green/greenstar/greenstar.css',
     ),
@@ -363,11 +363,11 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Application function */
-  $handler->display->display_options['fields']['field_oc_app_app_category']['id'] = 'field_oc_app_app_category';
-  $handler->display->display_options['fields']['field_oc_app_app_category']['table'] = 'field_data_field_oc_app_app_category';
-  $handler->display->display_options['fields']['field_oc_app_app_category']['field'] = 'field_oc_app_app_category';
-  $handler->display->display_options['fields']['field_oc_app_app_category']['label'] = 'App function';
-  $handler->display->display_options['fields']['field_oc_app_app_category']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_oc_app_category']['id'] = 'field_oc_app_category';
+  $handler->display->display_options['fields']['field_oc_app_category']['table'] = 'field_data_field_oc_app_category';
+  $handler->display->display_options['fields']['field_oc_app_category']['field'] = 'field_oc_app_category';
+  $handler->display->display_options['fields']['field_oc_app_category']['label'] = 'App function';
+  $handler->display->display_options['fields']['field_oc_app_category']['delta_offset'] = '0';
   /* Field: Content: Civic sector */
   $handler->display->display_options['fields']['field_oc_civic_category']['id'] = 'field_oc_civic_category';
   $handler->display->display_options['fields']['field_oc_civic_category']['table'] = 'field_data_field_oc_civic_category';
@@ -380,13 +380,13 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['fields']['field_oc_app_software_type']['label'] = 'App type';
   $handler->display->display_options['fields']['field_oc_app_software_type']['delta_offset'] = '0';
   /* Field: Content: Rating */
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['id'] = 'field_oc_app_aggregate_rating';
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['table'] = 'field_data_field_oc_app_aggregate_rating';
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['field'] = 'field_oc_app_aggregate_rating';
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['click_sort_column'] = 'rating';
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['type'] = 'fivestar_formatter_rating';
-  $handler->display->display_options['fields']['field_oc_app_aggregate_rating']['settings'] = array(
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['id'] = 'field_oc_aggregate_rating';
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['table'] = 'field_data_field_oc_aggregate_rating';
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['field'] = 'field_oc_aggregate_rating';
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['click_sort_column'] = 'rating';
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['type'] = 'fivestar_formatter_rating';
+  $handler->display->display_options['fields']['field_oc_aggregate_rating']['settings'] = array(
     'widget' => array(
       'fivestar_widget' => 'default',
     ),
@@ -413,23 +413,23 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'oc_application' => 'oc_application',
   );
-  /* Filter criterion: Content: Application function (field_oc_app_app_category) */
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['id'] = 'field_oc_app_app_category_tid';
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['table'] = 'field_data_field_oc_app_app_category';
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['field'] = 'field_oc_app_app_category_tid';
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['expose']['operator_id'] = 'field_oc_app_app_category_tid_op';
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['expose']['label'] = 'App function';
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['expose']['operator'] = 'field_oc_app_app_category_tid_op';
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['expose']['identifier'] = 'field_oc_app_app_category_tid';
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['expose']['remember_roles'] = array(
+  /* Filter criterion: Content: Application function (field_oc_app_category) */
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['id'] = 'field_oc_app_category_tid';
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['table'] = 'field_data_field_oc_app_category';
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['field'] = 'field_oc_app_category_tid';
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['expose']['operator_id'] = 'field_oc_app_category_tid_op';
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['expose']['label'] = 'App function';
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['expose']['operator'] = 'field_oc_app_category_tid_op';
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['expose']['identifier'] = 'field_oc_app_category_tid';
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['vocabulary'] = 'oc_application_category';
-  $handler->display->display_options['filters']['field_oc_app_app_category_tid']['hierarchy'] = 1;
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['vocabulary'] = 'oc_application_category';
+  $handler->display->display_options['filters']['field_oc_app_category_tid']['hierarchy'] = 1;
   /* Filter criterion: Content: Civic sector (field_oc_civic_category) */
   $handler->display->display_options['filters']['field_oc_civic_category_tid']['id'] = 'field_oc_civic_category_tid';
   $handler->display->display_options['filters']['field_oc_civic_category_tid']['table'] = 'field_data_field_oc_civic_category';
@@ -712,10 +712,10 @@ function opencivic_application_views_default_views() {
     'name' => 'name',
   );
   /* Relationship: Taxonomy term: Content using Application function */
-  $handler->display->display_options['relationships']['reverse_field_oc_app_app_category_node']['id'] = 'reverse_field_oc_app_app_category_node';
-  $handler->display->display_options['relationships']['reverse_field_oc_app_app_category_node']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['relationships']['reverse_field_oc_app_app_category_node']['field'] = 'reverse_field_oc_app_app_category_node';
-  $handler->display->display_options['relationships']['reverse_field_oc_app_app_category_node']['required'] = TRUE;
+  $handler->display->display_options['relationships']['reverse_field_oc_app_category_node']['id'] = 'reverse_field_oc_app_category_node';
+  $handler->display->display_options['relationships']['reverse_field_oc_app_category_node']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_oc_app_category_node']['field'] = 'reverse_field_oc_app_category_node';
+  $handler->display->display_options['relationships']['reverse_field_oc_app_category_node']['required'] = TRUE;
   /* Field: : field_oc_small_icon */
   $handler->display->display_options['fields']['field_oc_small_icon']['id'] = 'field_oc_small_icon';
   $handler->display->display_options['fields']['field_oc_small_icon']['table'] = 'field_data_field_oc_small_icon';
@@ -744,7 +744,7 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_oc_app_app_category_node';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_oc_app_category_node';
   $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';

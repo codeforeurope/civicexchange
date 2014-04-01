@@ -351,7 +351,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-12';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_aggregate_rating';
+    $pane->subtype = 'node:field_oc_aggregate_rating';
     $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
@@ -463,7 +463,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-16';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_app_category';
+    $pane->subtype = 'node:field_oc_app_category';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

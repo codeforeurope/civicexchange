@@ -56,7 +56,7 @@ function opencivic_application_field_group_info() {
     'label' => 'Categories',
     'weight' => '20',
     'children' => array(
-      0 => 'field_oc_app_app_category',
+      0 => 'field_oc_app_category',
       1 => 'field_oc_civic_category',
       2 => 'field_oc_tags',
     ),
