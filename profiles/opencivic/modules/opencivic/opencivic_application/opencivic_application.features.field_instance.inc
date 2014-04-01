@@ -719,8 +719,8 @@ function opencivic_application_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-oc_application-field_oc_app_logo'
-  $field_instances['node-oc_application-field_oc_app_logo'] = array(
+  // Exported field_instance: 'node-oc_application-field_oc_logo'
+  $field_instances['node-oc_application-field_oc_logo'] = array(
     'bundle' => 'oc_application',
     'deleted' => 0,
     'description' => '',
@@ -755,7 +755,7 @@ function opencivic_application_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_oc_app_logo',
+    'field_name' => 'field_oc_logo',
     'label' => 'Logo',
     'required' => 0,
     'settings' => array(

@@ -28,7 +28,7 @@ function opencivic_application_field_group_info() {
       2 => 'field_oc_app_creator',
       3 => 'field_oc_app_description',
       4 => 'field_oc_app_feature_list',
-      5 => 'field_oc_app_logo',
+      5 => 'field_oc_logo',
       6 => 'field_oc_app_url',
     ),
     'format_type' => 'tab',

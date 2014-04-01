@@ -506,7 +506,7 @@ function opencivic_organization_field_default_field_instances() {
   );
 
   // Exported field_instance: 'node-oc_organization-field_oc_org_logo'
-  $field_instances['node-oc_organization-field_oc_org_logo'] = array(
+  $field_instances['node-oc_organization-field_oc_logo'] = array(
     'bundle' => 'oc_organization',
     'deleted' => 0,
     'description' => 'URL of an image for the logo of the item.',
@@ -541,7 +541,7 @@ function opencivic_organization_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_oc_org_logo',
+    'field_name' => 'field_oc_logo',
     'label' => 'Logo',
     'required' => 0,
     'settings' => array(

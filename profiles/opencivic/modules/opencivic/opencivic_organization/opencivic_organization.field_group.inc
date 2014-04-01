@@ -29,7 +29,7 @@ function opencivic_organization_field_group_info() {
       3 => 'field_oc_org_coordinates',
       4 => 'field_oc_org_email',
       5 => 'field_oc_org_github_account',
-      6 => 'field_oc_org_logo',
+      6 => 'field_oc_logo',
       7 => 'field_oc_org_member',
       8 => 'field_oc_org_telephone',
       9 => 'field_oc_org_twitter',
