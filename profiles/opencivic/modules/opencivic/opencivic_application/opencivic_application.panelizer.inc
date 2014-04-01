@@ -437,7 +437,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-15';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_keywords';
+    $pane->subtype = 'node:field_oc_tags';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

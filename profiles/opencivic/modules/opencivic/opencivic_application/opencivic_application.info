@@ -119,7 +119,6 @@ features[views_view][] = application_at_a_glance
 features[views_view][] = application_list
 features[views_view][] = apps_search_list
 features[views_view][] = opencivic_application_categories
-features_exclude[taxonomy][tags] = tags
 features_exclude[taxonomy][oc_tags] = oc_tags
 features_exclude[field_base][body] = body
 features_exclude[field_base][field_image] = field_image
