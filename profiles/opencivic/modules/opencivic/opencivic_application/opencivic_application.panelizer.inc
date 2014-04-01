@@ -220,7 +220,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-7';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_file_attachments';
+    $pane->subtype = 'node:field_oc_file_attachments';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

@@ -114,7 +114,7 @@ function opencivic_application_field_group_info() {
     'label' => 'Media',
     'weight' => '21',
     'children' => array(
-      0 => 'field_oc_app_file_attachments',
+      0 => 'field_oc_file_attachments',
       1 => 'field_oc_app_screenshot',
       2 => 'field_oc_app_video',
     ),

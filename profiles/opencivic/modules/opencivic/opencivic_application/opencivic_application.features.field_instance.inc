@@ -480,8 +480,8 @@ function opencivic_application_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-oc_application-field_oc_app_file_attachments'
-  $field_instances['node-oc_application-field_oc_app_file_attachments'] = array(
+  // Exported field_instance: 'node-oc_application-field_oc_file_attachments'
+  $field_instances['node-oc_application-field_oc_file_attachments'] = array(
     'bundle' => 'oc_application',
     'deleted' => 0,
     'description' => '',
@@ -513,7 +513,7 @@ function opencivic_application_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_oc_app_file_attachments',
+    'field_name' => 'field_oc_file_attachments',
     'label' => 'File attachments',
     'required' => 0,
     'settings' => array(
