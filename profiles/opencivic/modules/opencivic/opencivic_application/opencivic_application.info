@@ -49,7 +49,6 @@ features[field_base][] = field_oc_app_screenshot
 features[field_base][] = field_oc_app_software_type
 features[field_base][] = field_oc_app_url
 features[field_base][] = field_oc_app_video
-features[field_base][] = field_oc_civic_category
 features[field_group][] = group_basic|node|oc_application|form
 features[field_group][] = group_categories|node|oc_application|form
 features[field_group][] = group_main|node|oc_application|form

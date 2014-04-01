@@ -10,6 +10,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 features[features_api][] = api:2
 features[field_base][] = description_field
+features[field_base][] = field_oc_civic_category
 features[field_base][] = field_oc_coordinates
 features[field_base][] = field_oc_icon
 features[field_base][] = field_oc_logo
