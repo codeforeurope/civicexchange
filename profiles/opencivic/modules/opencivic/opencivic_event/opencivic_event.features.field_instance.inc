@@ -67,8 +67,8 @@ function opencivic_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-oc_event-field_coordinates'
-  $field_instances['node-oc_event-field_coordinates'] = array(
+  // Exported field_instance: 'node-oc_event-field_oc_coordinates'
+  $field_instances['node-oc_event-field_oc_coordinates'] = array(
     'bundle' => 'oc_event',
     'deleted' => 0,
     'description' => '',
@@ -102,7 +102,7 @@ function opencivic_event_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_coordinates',
+    'field_name' => 'field_oc_coordinates',
     'label' => 'Coordinates',
     'required' => 0,
     'settings' => array(

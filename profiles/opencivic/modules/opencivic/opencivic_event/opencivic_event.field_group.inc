@@ -53,7 +53,7 @@ function opencivic_event_field_group_info() {
     'label' => 'Location',
     'weight' => '53',
     'children' => array(
-      0 => 'field_coordinates',
+      0 => 'field_oc_coordinates',
       1 => 'field_oc_deploy_location',
       2 => 'field_telephone',
       3 => 'field_url',

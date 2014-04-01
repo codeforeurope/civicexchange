@@ -26,7 +26,7 @@ function opencivic_organization_field_group_info() {
       0 => 'field_oc_org_abbreviation',
       1 => 'field_oc_org_additional_type',
       2 => 'field_oc_org_address',
-      3 => 'field_oc_org_coordinates',
+      3 => 'field_oc_coordinates',
       4 => 'field_oc_org_email',
       5 => 'field_oc_org_github_account',
       6 => 'field_oc_logo',
