@@ -1083,8 +1083,8 @@ function opencivic_application_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-oc_application-field_oc_app_video'
-  $field_instances['node-oc_application-field_oc_app_video'] = array(
+  // Exported field_instance: 'node-oc_application-field_oc_video'
+  $field_instances['node-oc_application-field_oc_video'] = array(
     'bundle' => 'oc_application',
     'deleted' => 0,
     'description' => 'An embedded video object.',
@@ -1115,7 +1115,7 @@ function opencivic_application_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_oc_app_video',
+    'field_name' => 'field_oc_video',
     'label' => 'Video',
     'required' => 0,
     'settings' => array(

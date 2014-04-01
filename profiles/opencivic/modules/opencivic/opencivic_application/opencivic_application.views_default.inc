@@ -203,17 +203,17 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['display_description'] = 'Displays the screenshots and video for an application';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Video */
-  $handler->display->display_options['fields']['field_oc_app_video']['id'] = 'field_oc_app_video';
-  $handler->display->display_options['fields']['field_oc_app_video']['table'] = 'field_data_field_oc_app_video';
-  $handler->display->display_options['fields']['field_oc_app_video']['field'] = 'field_oc_app_video';
-  $handler->display->display_options['fields']['field_oc_app_video']['label'] = '';
-  $handler->display->display_options['fields']['field_oc_app_video']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_oc_app_video']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_oc_app_video']['type'] = 'file_rendered';
-  $handler->display->display_options['fields']['field_oc_app_video']['settings'] = array(
+  $handler->display->display_options['fields']['field_oc_video']['id'] = 'field_oc_video';
+  $handler->display->display_options['fields']['field_oc_video']['table'] = 'field_data_field_oc_video';
+  $handler->display->display_options['fields']['field_oc_video']['field'] = 'field_oc_video';
+  $handler->display->display_options['fields']['field_oc_video']['label'] = '';
+  $handler->display->display_options['fields']['field_oc_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_oc_video']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_oc_video']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_oc_video']['settings'] = array(
     'file_view_mode' => 'media_large',
   );
-  $handler->display->display_options['fields']['field_oc_app_video']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_oc_video']['delta_offset'] = '0';
   /* Field: Content: Screenshots */
   $handler->display->display_options['fields']['field_oc_app_screenshot']['id'] = 'field_oc_app_screenshot';
   $handler->display->display_options['fields']['field_oc_app_screenshot']['table'] = 'field_data_field_oc_app_screenshot';
@@ -258,12 +258,12 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['filters']['field_oc_app_screenshot_alt']['field'] = 'field_oc_app_screenshot_alt';
   $handler->display->display_options['filters']['field_oc_app_screenshot_alt']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_oc_app_screenshot_alt']['group'] = 2;
-  /* Filter criterion: Content: Video (field_oc_app_video:display) */
-  $handler->display->display_options['filters']['field_oc_app_video_display']['id'] = 'field_oc_app_video_display';
-  $handler->display->display_options['filters']['field_oc_app_video_display']['table'] = 'field_data_field_oc_app_video';
-  $handler->display->display_options['filters']['field_oc_app_video_display']['field'] = 'field_oc_app_video_display';
-  $handler->display->display_options['filters']['field_oc_app_video_display']['operator'] = 'not empty';
-  $handler->display->display_options['filters']['field_oc_app_video_display']['group'] = 2;
+  /* Filter criterion: Content: Video (field_oc_video:display) */
+  $handler->display->display_options['filters']['field_oc_video_display']['id'] = 'field_oc_video_display';
+  $handler->display->display_options['filters']['field_oc_video_display']['table'] = 'field_data_field_oc_video';
+  $handler->display->display_options['filters']['field_oc_video_display']['field'] = 'field_oc_video_display';
+  $handler->display->display_options['filters']['field_oc_video_display']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_oc_video_display']['group'] = 2;
   $handler->display->display_options['block_description'] = 'Application Media';
 
   /* Display: Application At a Glance pane */

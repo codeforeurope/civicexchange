@@ -116,7 +116,7 @@ function opencivic_application_field_group_info() {
     'children' => array(
       0 => 'field_oc_file_attachments',
       1 => 'field_oc_app_screenshot',
-      2 => 'field_oc_app_video',
+      2 => 'field_oc_video',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

@@ -194,7 +194,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-6';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_video';
+    $pane->subtype = 'node:field_oc_video';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
