@@ -8,9 +8,8 @@
  * Implements hook_views_default_views().
  */
 function opencivic_deployment_views_default_views() {
-  $views = array();
+  $export = array();
 
-  // Exported view: deployment_at_a_glance
   $view = new view();
   $view->name = 'deployment_at_a_glance';
   $view->description = 'Defines the At a Glance block for Deployments.';
@@ -88,26 +87,8 @@ function opencivic_deployment_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['block_description'] = 'Deployment At a Glance';
-  $translatables['deployment_at_a_glance'] = array(
-    t('Master'),
-    t('At a Glance'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('<div class="edit-content-button"><a href="/node/[nid]/edit">+ edit details</a></div>'),
-    t('Application used'),
-    t('Developers'),
-    t('All'),
-    t('Block'),
-    t('OpenCivic Deployment At a Glance'),
-  );
+  $export['deployment_at_a_glance'] = $view;
 
-  $views[$view->name] = $view;
-
-  // Exported view: deployments_list
   $view = new view();
   $view->name = 'deployments_list';
   $view->description = 'The Deployments listing page';
@@ -240,8 +221,8 @@ function opencivic_deployment_views_default_views() {
     3 => 0,
   );
   $handler->display->display_options['filters']['field_oc_civic_category_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_oc_civic_category_tid']['vocabulary'] = 'civic_category';
-  /* Filter criterion: Content: Location (field_oc_deploy_location:country) */
+  $handler->display->display_options['filters']['field_oc_civic_category_tid']['vocabulary'] = 'oc_civic_category';
+  /* Filter criterion: Content: Location - Country */
   $handler->display->display_options['filters']['field_oc_deploy_location_country']['id'] = 'field_oc_deploy_location_country';
   $handler->display->display_options['filters']['field_oc_deploy_location_country']['table'] = 'field_data_field_oc_deploy_location';
   $handler->display->display_options['filters']['field_oc_deploy_location_country']['field'] = 'field_oc_deploy_location_country';
@@ -412,47 +393,8 @@ function opencivic_deployment_views_default_views() {
     'oc_deployment' => 'oc_deployment',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  $translatables['deployments_list'] = array(
-    t('Master'),
-    t('Deployments'),
-    t('See all'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Description'),
-    t('Deployments show where applications have been installed and used. Visit a deployment\'s detail page to learn more about the organizations that deployed the app and their experience using it. Use the form below to filter the list of deployments by category and location.'),
-    t('App deployed'),
-    t('Developer'),
-    t('Date added'),
-    t('Application'),
-    t('Website'),
-    t('Location'),
-    t('<span class="table-action-button"><a href="node/[nid]">deployment details</a></span>'),
-    t('App type'),
-    t('Civic Focus'),
-    t('Country'),
-    t('OpenCivic Deployment'),
-    t('Deployments listing page.'),
-    t('more'),
-    t('Deployments feed'),
-    t('Recent deployments'),
-    t('Deployment/Recent deployments'),
-    t('Recent deployments pane'),
-    t('View panes'),
-  );
+  $export['deployments_list'] = $view;
 
-  $views[$view->name] = $view;
-
-  // Exported view: deployments_map
   $view = new view();
   $view->name = 'deployments_map';
   $view->description = 'Creates a map showing app deployments';
@@ -465,7 +407,7 @@ function opencivic_deployment_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Application Deployments';
+  $handler->display->display_options['title'] = 'Application deployments';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -473,8 +415,15 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'openlayers_map';
-  $handler->display->display_options['style_options']['map'] = 'application_deployments';
+  $handler->display->display_options['style_plugin'] = 'leaflet';
+  $handler->display->display_options['style_options']['data_source'] = 'field_oc_coordinates';
+  $handler->display->display_options['style_options']['map'] = 'OSM Mapnik';
+  $handler->display->display_options['style_options']['zoom']['initialZoom'] = '8';
+  $handler->display->display_options['style_options']['zoom']['minZoom'] = '0';
+  $handler->display->display_options['style_options']['zoom']['maxZoom'] = '18';
+  $handler->display->display_options['style_options']['vector_display']['stroke'] = 0;
+  $handler->display->display_options['style_options']['vector_display']['fill'] = 0;
+  $handler->display->display_options['style_options']['vector_display']['clickable'] = 0;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['id'] = 'field_oc_deploy_deployment_of_target_id';
   $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['table'] = 'field_data_field_oc_deploy_deployment_of';
@@ -548,47 +497,26 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['style_options']['name_field'] = 'title';
   $handler->display->display_options['style_options']['description_field'] = 'title';
   $handler->display->display_options['style_options']['map'] = 'OSM Mapnik';
-  $handler->display->display_options['style_options']['icon'] = array(
-    'iconUrl' => '',
-    'shadowUrl' => '',
-    'iconSize' => array(
-      'x' => '',
-      'y' => '',
-    ),
-    'iconAnchor' => array(
-      'x' => '',
-      'y' => '',
-    ),
-    'shadowAnchor' => array(
-      'x' => '',
-      'y' => '',
-    ),
-    'popupAnchor' => array(
-      'x' => '',
-      'y' => '',
-    ),
-  );
+  $handler->display->display_options['style_options']['zoom']['initialZoom'] = '6';
+  $handler->display->display_options['style_options']['zoom']['minZoom'] = '0';
+  $handler->display->display_options['style_options']['zoom']['maxZoom'] = '18';
+  $handler->display->display_options['style_options']['vector_display']['stroke'] = 0;
+  $handler->display->display_options['style_options']['vector_display']['fill'] = 0;
+  $handler->display->display_options['style_options']['vector_display']['clickable'] = 0;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $translatables['deployments_map'] = array(
-    t('Master'),
-    t('Application Deployments'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Content entity referenced from field_oc_deploy_deployment_of'),
-    t('Nid'),
-    t('Deployments map pane'),
-    t('View panes'),
-  );
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $export['deployments_map'] = $view;
 
-  $views[$view->name] = $view;
-
-  // Exported view: replated_deployments
   $view = new view();
   $view->name = 'replated_deployments';
   $view->description = 'Defines the "Related deployments" block for Application detail pages';
@@ -715,33 +643,7 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['pane_title'] = 'App deployments (wide)';
-  $translatables['replated_deployments'] = array(
-    t('Master'),
-    t('Where it is used'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('No current uses recorded.'),
-    t('All'),
-    t('Block'),
-    t('OpenCivic Application related deployments'),
-    t('Application related deployments pane'),
-    t('View panes'),
-    t('A list of deployments for an app, formatted for content column.'),
-    t('App deployments (wide)'),
-  );
+  $export['replated_deployments'] = $view;
 
-  $views[$view->name] = $view;
-
-  return $views;
+  return $export;
 }
