@@ -237,14 +237,14 @@ projects[leaflet_more_maps][subdir] = "contrib"
 projects[leaflet_more_maps][version] = 1.7
 
 projects[link][subdir] = "contrib"
-projects[link][version] = 1.1
+projects[link][version] = 1.2
 
 projects[logintoboggan][subdir] = "contrib"
 projects[logintoboggan][version] = "1.3"
 
 projects[mail_edit][subdir] = "contrib"
 projects[mail_edit][version] = "1.0"
-projects[mail_edit][patch][1826220] = https://drupal.org/files/mail_edit-undefined_index_path-1826220-2.patch
+projects[mail_edit][patch][1826220] = http://drupal.org/files/mail_edit-undefined_index_path-1826220-2.patch
 
 projects[maxlength][subdir] = "contrib"
 projects[maxlength][version] = 3.0-beta1
@@ -413,12 +413,8 @@ projects[webform][version] = 3.19
 ; Schema.org kickstart modules ======================================================
 
 ; This dev release fixes a bug with devel_generate integration
-projects[entityreference][version] = "1.x-dev"
+projects[entityreference][version] = "1.1"
 projects[entityreference][subdir] = "contrib"
-projects[entityreference][download][url] = "http://git.drupal.org/project/entityreference.git"
-projects[entityreference][download][revision] = 06089a92ee8b269f153064ad3090ce6b464f38aa
-projects[entityreference][download][branch] = 7.x-1.x
-projects[entityreference][type] = "module"
 
 projects[rdfx][version] = "2.0-alpha4"
 projects[rdfx][subdir] = "contrib"
@@ -448,6 +444,7 @@ projects[schemaorg][patch][1853590] = http://drupal.org/files/exportfix-1853590-
 
 ; Search API DB module.
 projects[search_api_db][subdir] = contrib
+projects[search_api_db][version] = "1.0-rc2"
 
 ; Please fill the following out. Type may be one of get, git, bzr or svn,
 ; and url is the url of the download.
