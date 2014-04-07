@@ -302,6 +302,9 @@ function opencivic_application_panelizer_defaults() {
       'override_title' => '',
       'override_title_text' => '',
       'widget_title' => '<none>',
+      'context' => array(
+        0 => 'panelizer',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
@@ -322,7 +325,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Share this page',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -336,6 +339,30 @@ function opencivic_application_panelizer_defaults() {
     $display->panels['sidebar'][0] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
+    $pane->panel = 'sidebar';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<h2>At a glance</h2>',
+      'format' => 'panopoly_wysiwyg_text',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['sidebar'][1] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_oc_app_url';
@@ -358,12 +385,12 @@ function opencivic_application_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['sidebar'][1] = 'new-11';
+    $display->content['new-12'] = $pane;
+    $display->panels['sidebar'][2] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-13';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_oc_aggregate_rating';
@@ -384,12 +411,12 @@ function opencivic_application_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['sidebar'][2] = 'new-12';
+    $display->content['new-13'] = $pane;
+    $display->panels['sidebar'][3] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-14';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_oc_app_creator';
@@ -414,12 +441,12 @@ function opencivic_application_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['sidebar'][3] = 'new-13';
+    $display->content['new-14'] = $pane;
+    $display->panels['sidebar'][4] = 'new-14';
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-15';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_oc_app_contributor';
@@ -444,34 +471,6 @@ function opencivic_application_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['sidebar'][4] = 'new-14';
-    $pane = new stdClass();
-    $pane->pid = 'new-15';
-    $pane->panel = 'sidebar';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_tags';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'taxonomy_term_reference_link',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
     $pane->position = 5;
     $pane->locks = array();
     $display->content['new-15'] = $pane;
@@ -480,7 +479,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-16';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_category';
+    $pane->subtype = 'node:field_oc_civic_category';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -508,7 +507,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-17';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_license';
+    $pane->subtype = 'node:field_oc_app_category';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -536,7 +535,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-18';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_software_type';
+    $pane->subtype = 'node:field_oc_app_license';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -564,7 +563,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-19';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_civic_category';
+    $pane->subtype = 'node:field_oc_app_software_type';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -592,17 +591,17 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-20';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_download_url';
+    $pane->subtype = 'node:field_oc_app_requirements';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
-      'formatter' => 'link_default',
-      'delta_limit' => 0,
+      'formatter' => 'taxonomy_term_reference_link',
+      'delta_limit' => '0',
       'delta_offset' => '0',
-      'delta_reversed' => FALSE,
+      'delta_reversed' => 0,
       'formatter_settings' => array(),
-      'context' => 'panelizer',
+      'context' => array(),
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -620,7 +619,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-21';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_app_install_url';
+    $pane->subtype = 'node:field_oc_app_download_url';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -648,6 +647,62 @@ function opencivic_application_panelizer_defaults() {
     $pane->pid = 'new-22';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_oc_app_install_url';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'link_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 12;
+    $pane->locks = array();
+    $display->content['new-22'] = $pane;
+    $display->panels['sidebar'][12] = 'new-22';
+    $pane = new stdClass();
+    $pane->pid = 'new-23';
+    $pane->panel = 'sidebar';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_oc_tags';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'taxonomy_term_reference_link',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 13;
+    $pane->locks = array();
+    $display->content['new-23'] = $pane;
+    $display->panels['sidebar'][13] = 'new-23';
+    $pane = new stdClass();
+    $pane->pid = 'new-24';
+    $pane->panel = 'sidebar';
+    $pane->type = 'entity_field';
     $pane->subtype = 'node:field_oc_app_related_apps';
     $pane->shown = TRUE;
     $pane->access = array();
@@ -666,10 +721,10 @@ function opencivic_application_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 12;
+    $pane->position = 14;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['sidebar'][12] = 'new-22';
+    $display->content['new-24'] = $pane;
+    $display->panels['sidebar'][14] = 'new-24';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

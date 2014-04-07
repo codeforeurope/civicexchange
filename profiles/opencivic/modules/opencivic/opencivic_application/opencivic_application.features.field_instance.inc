@@ -430,7 +430,7 @@ function opencivic_application_field_default_field_instances() {
     'bundle' => 'oc_application',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Features or modules provided by this application (and possibly required by other applications).',
+    'description' => 'Important features provided by this application (and possibly required by other applications).',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -462,7 +462,10 @@ function opencivic_application_field_default_field_instances() {
     'label' => 'Key features',
     'required' => 0,
     'settings' => array(
-      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1332,11 +1335,11 @@ function opencivic_application_field_default_field_instances() {
   t('Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).');
   t('Demo url');
   t('Enter the URL of the application homepage where people can go to find more information');
-  t('Features or modules provided by this application (and possibly required by other applications).');
   t('File attachments');
   t('Host');
   t('Icon');
   t('If the software can be downloaded, URL to download it.');
+  t('Important features provided by this application (and possibly required by other applications).');
   t('Is the software a binary such as a .exe, like MS Word? Is it SaaS (Software as a Service), provided by a hosted or cloud service like Google Apps? Is it an open source scripting language like a PHP app?');
   t('Key features');
   t('License');

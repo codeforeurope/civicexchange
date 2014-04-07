@@ -335,6 +335,8 @@ function opencivic_deployment_views_default_views() {
 
   /* Display: Recent deployments pane */
   $handler = $view->new_display('panel_pane', 'Recent deployments pane', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Live and deployed';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -428,6 +430,7 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['id'] = 'field_oc_deploy_deployment_of_target_id';
   $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['table'] = 'field_data_field_oc_deploy_deployment_of';
   $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['field'] = 'field_oc_deploy_deployment_of_target_id';
+  $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['required'] = TRUE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -474,6 +477,20 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Add deployment of (field_oc_deploy_deployment_of) */
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['id'] = 'field_oc_deploy_deployment_of_target_id';
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['table'] = 'field_data_field_oc_deploy_deployment_of';
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['field'] = 'field_oc_deploy_deployment_of_target_id';
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['field_oc_deploy_deployment_of_target_id']['validate_options']['types'] = array(
+    'oc_application' => 'oc_application',
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -515,6 +532,17 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_oc_deploy_deployment_of_target_id' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Add deployment of (field_oc_deploy_deployment_of)',
+    ),
+  );
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['deployments_map'] = $view;
 
   $view = new view();

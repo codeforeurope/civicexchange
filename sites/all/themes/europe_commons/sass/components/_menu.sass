@@ -13,11 +13,14 @@ nav.navbar-collapse
 
 .navbar-default .navbar-nav
   height: $nav-height
+  // width: 150px
   // line-height: 40px
   //TODO
   background: $color-yellow
   // nav#block-menu-block-1 ul.menu
   li
+    // width: 150px
+    // margin-left: 50px
     margin-right: 35px
     a
       color: #000
@@ -25,30 +28,33 @@ nav.navbar-collapse
       font-weight: normal !important
       // text-transform: uppercase;
       font-size: 1.2em
-      padding: 10px 0 0 23px
+      padding: 10px 20px 0 23px
+      height: $nav-height
     .active
-      background: $color-yellow
+      background: transparent
       a
         color: #000
       // a:hover,
-      a:focus
+      &:focus
+        // background: $color-yellow
+      &:hover
         background: $color-yellow
 
-  li.li-136
+  li.li-138, li.li-138:active
     background: transparent url(../images-source/home_dwn.png) no-repeat left center
-  li.li-136:hover
-    background: transparent url(../images-source/home_up.png) no-repeat left center
-  li.li-1200
-    background: transparent url(../images-source/app_dwn.png) no-repeat left center
-  li.li-1200:hover
-    background: transparent url(../images-source/app_up.png) no-repeat left center
-  li.li-138
-    background: transparent url(../images-source/org_dwn.png) no-repeat left center
   li.li-138:hover
+    background: transparent url(../images-source/home_up.png) no-repeat left center
+  li.li-1208
+    background: transparent url(../images-source/app_dwn.png) no-repeat left center
+  li.li-1208:hover
+    background: transparent url(../images-source/app_up.png) no-repeat left center
+  li.li-140
+    background: transparent url(../images-source/org_dwn.png) no-repeat left center
+  li.li-140:hover
     background: transparent url(../images-source/org_up.png) no-repeat left center
-  li.li-1211
+  li.li-1219
     background: transparent url(../images-source/blog_dwn.png) no-repeat left center
-  li.li-1211:hover
+  li.li-1219:hover
     background: transparent url(../images-source/blog_up.png) no-repeat left center
   li.li-1434
     background: transparent url(../images-source/about_dwn.png) no-repeat left center
@@ -66,3 +72,7 @@ nav.navbar-collapse
   // #block-menu-menu-social-links
   //   float: right
   //   margin: 0
+
+#secondary-menu-links
+  float: right
+

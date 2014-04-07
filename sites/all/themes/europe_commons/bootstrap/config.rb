@@ -17,6 +17,6 @@ css_dir = "../../../libraries/europe_commons_bootstrap/css" # Compiled CSS goes 
 javascripts_dir = "../../../libraries/europe_commons_bootstrap/js" # Compiled JS goes here.
 
 sass_dir = "."
-output_style = :expanded # Can also be :nested or :compact or :compressed
+output_style = :compressed # Can also be :nested or :compact or :compressed
 relative_assets = true # True to generate relative paths from CSS to assets.
 line_comments = false # Controls debugging comments that display the original location of your selectors.
