@@ -41,7 +41,7 @@ nav.navbar-collapse {
       font-family: "Montserrat", Arial, Helvetica, sans-serif;
       font-weight: normal !important;
       font-size: 1.2em;
-      padding: 10px 20px 0 23px;
+      padding: 10px 0px 0 23px;
       height: 40px; }
     .navbar-default .navbar-nav li .active {
       background: transparent; }
