@@ -80,7 +80,7 @@ function opencivic_story_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'view_mode' => 'teaser',
-      'widget_title' => NULL,
+      'widget_title' => '<none>',
       'items_per_page' => NULL,
       'exposed' => array(
         'sort_by' => NULL,
@@ -94,6 +94,8 @@ function opencivic_story_default_page_manager_pages() {
       'path' => NULL,
       'view_settings' => 'fields',
       'header_type' => 'none',
+      'override_title' => '',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
