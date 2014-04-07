@@ -30,6 +30,17 @@ function opencivic_story_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_oc_featured_image']['id'] = 'field_oc_featured_image';
+  $handler->display->display_options['fields']['field_oc_featured_image']['table'] = 'field_data_field_oc_featured_image';
+  $handler->display->display_options['fields']['field_oc_featured_image']['field'] = 'field_oc_featured_image';
+  $handler->display->display_options['fields']['field_oc_featured_image']['label'] = '';
+  $handler->display->display_options['fields']['field_oc_featured_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_oc_featured_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_oc_featured_image']['settings'] = array(
+    'image_style' => 'panopoly_image_half',
+    'image_link' => 'content',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -37,17 +48,6 @@ function opencivic_story_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => 'content',
-  );
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -92,8 +92,8 @@ function opencivic_story_views_default_views() {
     'oc_story' => 'oc_story',
   );
 
-  /* Display: Stories list */
-  $handler = $view->new_display('panel_pane', 'Stories list', 'panel_pane_1');
+  /* Display: List */
+  $handler = $view->new_display('panel_pane', 'List', 'panel_pane_1');
   $export['story'] = $view;
 
   return $export;

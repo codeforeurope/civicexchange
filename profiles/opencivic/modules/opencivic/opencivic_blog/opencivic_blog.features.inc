@@ -17,6 +17,13 @@ function opencivic_blog_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function opencivic_blog_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function opencivic_blog_node_info() {
@@ -39,16 +46,15 @@ function opencivic_blog_node_info() {
 function opencivic_blog_rdf_default_mappings() {
   $schemaorg = array();
 
-  // Exported RDF mapping: blog
-  $schemaorg['node']['blog'] = array(
+  // Exported RDF mapping: oc_blog
+  $schemaorg['node']['oc_blog'] = array(
     'rdftype' => array(
-      0 => 'schema:BlogPosting',
-      1 => 'sioc:Item',
-      2 => 'foaf:Document',
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
     ),
     'title' => array(
       'predicates' => array(
-        0 => 'schema:name',
+        0 => 'dc:title',
       ),
     ),
     'created' => array(
@@ -68,8 +74,7 @@ function opencivic_blog_rdf_default_mappings() {
     ),
     'body' => array(
       'predicates' => array(
-        0 => 'schema:text',
-        1 => 'content:encoded',
+        0 => 'content:encoded',
       ),
     ),
     'uid' => array(
@@ -80,7 +85,7 @@ function opencivic_blog_rdf_default_mappings() {
     ),
     'name' => array(
       'predicates' => array(
-        0 => 'schema:name',
+        0 => 'foaf:name',
       ),
     ),
     'comment_count' => array(
@@ -96,35 +101,11 @@ function opencivic_blog_rdf_default_mappings() {
       'datatype' => 'xsd:dateTime',
       'callback' => 'date_iso8601',
     ),
-    'url' => array(
-      'predicates' => array(
-        0 => 'schema:url',
-      ),
-      'type' => 'rel',
-    ),
-    'field_image' => array(
-      'predicates' => array(
-        0 => 'schema:image',
-      ),
-    ),
-    'field_oc_tags' => array(
-      'predicates' => array(
-        0 => 'schema:keywords',
-      ),
-    ),
-    'title_field' => array(
+    'field_oc_featured_image' => array(
       'predicates' => array(),
+      'type' => 'rel',
     ),
   );
 
   return $schemaorg;
-}
-
-/**
- * Implements hook_views_api().
- */
-function opencivic_blog_views_api() {
-  return array(
-    'api' => '3.0',
-  );
 }

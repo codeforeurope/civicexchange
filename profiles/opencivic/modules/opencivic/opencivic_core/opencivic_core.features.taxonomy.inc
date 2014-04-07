@@ -13,7 +13,7 @@ function opencivic_core_taxonomy_default_vocabularies() {
       'name' => 'Civic sector',
       'machine_name' => 'oc_civic_category',
       'description' => 'The public service provided by the software.',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
@@ -36,29 +36,6 @@ function opencivic_core_taxonomy_default_vocabularies() {
       'name' => 'License',
       'machine_name' => 'oc_license',
       'description' => 'The licensing terms under which software is distributed.',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
-    'oc_tags' => array(
-      'name' => 'Tags',
-      'machine_name' => 'oc_tags',
-      'description' => 'Use tags to group articles on similar topics into categories.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
@@ -128,6 +105,29 @@ function opencivic_core_taxonomy_default_vocabularies() {
       'name' => 'Software type',
       'machine_name' => 'oc_software_type',
       'description' => 'Ways that software users are allowed to access and use the software.',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'oc_tags' => array(
+      'name' => 'Tags',
+      'machine_name' => 'oc_tags',
+      'description' => 'Use tags to group articles on similar topics into categories.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

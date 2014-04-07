@@ -17,14 +17,7 @@ function opencivic_story_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_oc_story_app_references',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
+    'foreign keys' => array(),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -61,14 +54,7 @@ function opencivic_story_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_oc_story_org_references',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
+    'foreign keys' => array(),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',

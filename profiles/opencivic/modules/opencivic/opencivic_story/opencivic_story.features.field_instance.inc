@@ -67,6 +67,81 @@ function opencivic_story_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-oc_story-field_oc_featured_image'
+  $field_instances['node-oc_story-field_oc_featured_image'] = array(
+    'bundle' => 'oc_story',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 6,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_oc_featured_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+          'youtube' => 0,
+        ),
+        'label_help_description' => '',
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-oc_story-field_oc_story_app_references'
   $field_instances['node-oc_story-field_oc_story_app_references'] = array(
     'bundle' => 'oc_story',
@@ -134,72 +209,7 @@ function opencivic_story_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-oc_story-field_image'
-  $field_instances['node-oc_story-field_image'] = array(
-    'bundle' => 'oc_story',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 1,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_image',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'entity_translation_sync' => FALSE,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'label_help_description' => '',
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -270,14 +280,14 @@ function opencivic_story_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
   // Exported field_instance: 'node-oc_story-field_oc_tags'
   $field_instances['node-oc_story-field_oc_tags'] = array(
     'bundle' => 'oc_story',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -317,16 +327,65 @@ function opencivic_story_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'taxonomy',
+      'module' => 'autocomplete_deluxe',
       'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
         'autocomplete_path' => 'taxonomy/autocomplete',
         'content_taxonomy_autocomplete_new_terms' => 'allow',
         'label_help_description' => '',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'autocomplete_deluxe_taxonomy',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-oc_story-title_field'
+  $field_instances['node-oc_story-title_field'] = array(
+    'bundle' => 'oc_story',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
     ),
   );
 
@@ -337,6 +396,7 @@ function opencivic_story_field_default_field_instances() {
   t('Image');
   t('Organization references');
   t('Tags');
+  t('Title');
 
   return $field_instances;
 }

@@ -16,7 +16,10 @@ function opencivic_story_default_page_manager_pages() {
   $page->admin_title = 'Stories';
   $page->admin_description = '';
   $page->path = 'stories';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Stories',
@@ -54,7 +57,7 @@ function opencivic_story_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'brenham_flipped';
+  $display->layout = 'bryant_flipped_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(

@@ -49,7 +49,7 @@ function opencivic_story_node_info() {
 function opencivic_story_rdf_default_mappings() {
   $schemaorg = array();
 
-  // Exported RDF mapping: comment_node_story
+  // Exported RDF mapping: comment_node_oc_story
   $schemaorg['comment']['comment_node_oc_story'] = array(
     'rdftype' => array(
       0 => 'sioc:Post',
@@ -99,7 +99,7 @@ function opencivic_story_rdf_default_mappings() {
     ),
   );
 
-  // Exported RDF mapping: story
+  // Exported RDF mapping: oc_story
   $schemaorg['node']['oc_story'] = array(
     'rdftype' => array(
       0 => 'schema:Article',
@@ -177,6 +177,10 @@ function opencivic_story_rdf_default_mappings() {
     ),
     'field_oc_story_org_references' => array(
       'predicates' => array(),
+    ),
+    'field_oc_featured_image' => array(
+      'predicates' => array(),
+      'type' => 'rel',
     ),
   );
 
