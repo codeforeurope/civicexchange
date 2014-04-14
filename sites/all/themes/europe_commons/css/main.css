@@ -48,7 +48,7 @@ nav.navbar-collapse {
       .navbar-default .navbar-nav li .active a {
         color: black; }
       .navbar-default .navbar-nav li .active:hover {
-        background: #f9e829; }
+        background: transparent; }
   .navbar-default .navbar-nav li.li-138, .navbar-default .navbar-nav li.li-138:active {
     background: transparent url(../images-source/home_dwn.png) no-repeat left center; }
   .navbar-default .navbar-nav li.li-138:hover {
