@@ -646,6 +646,9 @@ function opencivic_deployment_views_default_views() {
   /* Display: Where it is used */
   $handler = $view->new_display('panel_pane', 'Where it is used', 'panel_pane_2');
   $handler->display->display_options['display_description'] = 'A list of deployments for an app, formatted for content column.';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_oc_deploy_location']['id'] = 'field_oc_deploy_location';
@@ -668,6 +671,7 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['fields']['field_oc_deploy_url']['label'] = '';
   $handler->display->display_options['fields']['field_oc_deploy_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_oc_deploy_url']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_oc_deploy_url']['type'] = 'link_url';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
