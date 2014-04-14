@@ -93,7 +93,17 @@ class DeploymentsMigration extends DrupalNode7Migration {
     $this->addFieldMapping('title', 'title_field');
 
     $this->addFieldMapping('field_oc_coordinates', 'field_coordinates');
-    $this->addFieldMapping('field_oc_deploy_location', 'field_location');
+
+    $addr_arguments = array(
+      'organisation_name' => array('source_field' => 'field_location:organisation_name'),
+      'thoroughfare' => array('source_field' => 'field_location:thoroughfare'),
+      'locality' => array('source_field' => 'field_location:locality'),
+      'postal_code' => array('source_field' => 'field_location:postal_code'),
+      'administrative_area' => array('source_field' => 'field_location:administrative_area'),
+      'sub_administrative_area' => array('source_field' => 'field_location:sub_administrative_area'),
+    );
+    $this->addFieldMapping('field_oc_deploy_location', 'field_location')
+      ->arguments($addr_arguments);
 
     # Reference fields
     $this->addFieldMapping('field_oc_deploy_deployment_of', 'field_deployment_of')
@@ -118,7 +128,19 @@ class OrganizationsMigration extends DrupalNode7Migration {
     $this->addFieldMapping('field_oc_org_description', 'field_description');
     $this->addFieldMapping('field_oc_org_description:format')
       ->defaultValue('panopoly_wysiwyg_text');
-    $this->addFieldMapping('field_oc_org_address', 'field_address');
+
+    # Address
+    $addr_arguments = array(
+      'organisation_name' => array('source_field' => 'field_address:organisation_name'),
+      'thoroughfare' => array('source_field' => 'field_address:thoroughfare'),
+      'locality' => array('source_field' => 'field_address:locality'),
+      'postal_code' => array('source_field' => 'field_address:postal_code'),
+      'administrative_area' => array('source_field' => 'field_address:administrative_area'),
+      'sub_administrative_area' => array('source_field' => 'field_address:sub_administrative_area'),
+    );
+    $this->addFieldMapping('field_oc_org_address', 'field_address')
+      ->arguments($addr_arguments);
+
     $this->addFieldMapping('field_oc_coordinates', 'field_coordinates');
     $this->addFieldMapping('field_oc_org_email', 'field_email');
     $this->addFieldMapping('field_oc_logo', 'field_image');
@@ -128,6 +150,11 @@ class OrganizationsMigration extends DrupalNode7Migration {
     $this->addFieldMapping('field_oc_org_url', 'field_url');
 
     # Taxonomy terms
+    $this->addFieldMapping('field_oc_civic_category', 'field_civic_category')
+        ->sourceMigration('civic_sector_terms');
+    $this->addFieldMapping('field_oc_civic_category:source_type')
+        ->defaultValue('tid');
+
     $this->addFieldMapping('field_oc_org_additional_type', 'field_additional_type')
       ->sourceMigration('organization_type_terms');
     $this->addFieldMapping('field_oc_org_additional_type:source_type')
