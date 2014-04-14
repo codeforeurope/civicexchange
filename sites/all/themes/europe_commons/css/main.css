@@ -6,9 +6,11 @@
   float: right; }
 .node-type-oc-application .field-label {
   font-size: 14px;
-  color: #6f6f6f; }
+  color: #6f6f6f;
+  margin: 20px 0 3px 0; }
 .node-type-oc-application .burr-flipped-sidebar-content ul.links {
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 0; }
   .node-type-oc-application .burr-flipped-sidebar-content ul.links li {
     list-style-type: none;
     display: inline; }
@@ -19,6 +21,8 @@
 
 .view-replated-deployments {
   margin-bottom: 20px; }
+  .view-replated-deployments .views-row {
+    margin-bottom: 10px; }
 
 nav.navbar-collapse {
   background: #f9e829;
