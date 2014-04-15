@@ -81,12 +81,11 @@ nav.navbar-collapse {
 #secondary-menu-links {
   float: right; }
 
-#block-search-form {
-  float: right;
+#block-search-form, .search-form {
   padding: 0 0 0 0; }
-  #block-search-form .form-control {
+  #block-search-form .form-control, .search-form .form-control {
     display: inline-block; }
-  #block-search-form .form-submit {
+  #block-search-form .form-submit, .search-form .form-submit {
     margin-top: 0em;
     background: transparent url(../images-source/Search_Yellow.png) no-repeat left top;
     text-indent: -9999px;
@@ -94,16 +93,19 @@ nav.navbar-collapse {
     padding-right: 20px;
     font-size: 200%;
     border: none; }
-  #block-search-form .form-submit:hover {
+  #block-search-form .form-submit:hover, .search-form .form-submit:hover {
     background: transparent url(../images-source/Search_Green.png) no-repeat left top; }
-  #block-search-form .form-item input.form-text, #block-search-form .form-item textarea {
+  #block-search-form .form-item input.form-text, #block-search-form .form-item textarea, .search-form .form-item input.form-text, .search-form .form-item textarea {
     border: none;
     background: #dbdbdb;
     height: 32px;
     width: 200px; }
-  #block-search-form .compact-form-label {
+  #block-search-form .compact-form-label, .search-form .compact-form-label {
     font-weight: normal;
     top: 6px; }
+
+header #block-search-form, header .search-form {
+  float: right; }
 
 #block-views-opencivic-sponsor-block-1 {
   margin-bottom: 30px; }

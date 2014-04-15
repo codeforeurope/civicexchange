@@ -126,6 +126,9 @@
       <div id="header" class="">
         <?php print render($page['header']); ?>
       </div>
+      <?php if ($search_form): ?>
+    <?php print $search_form; ?>
+<?php endif; ?>
 
       <nav class="collapse navbar-collapse <?php if (!$main_menu && !$secondary_menu) { print 'element-invisible'; } ?>" role="navigation">
         <?php
