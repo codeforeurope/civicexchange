@@ -136,8 +136,10 @@ header #block-search-form, header .search-form {
     .view-opencivic-application-facet-search .views-row .views-field-title {
       font-size: 1.2em; }
 
-.view-application-list .views-row {
+.view-application-list .views-row,
+.view-deployments-list .views-row {
   margin-bottom: 20px; }
+
 .view-application-list .views-field-field-oc-logo {
   display: inline-block;
   margin-right: 10px;
@@ -148,6 +150,11 @@ header #block-search-form, header .search-form {
 
 .view-story .views-field-title {
   font-size: 1.5em; }
+
+.view-ec-tweets .table, .view-ec-tweets tbody {
+  border: none; }
+  .view-ec-tweets .table tr, .view-ec-tweets .table td, .view-ec-tweets tbody tr, .view-ec-tweets tbody td {
+    border: none; }
 
 .pane-service-links {
   padding-bottom: 15px; }
