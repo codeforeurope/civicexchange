@@ -30,6 +30,38 @@ function opencivic_application_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_fe_nodequeue_export_fields().
+ */
+function opencivic_application_fe_nodequeue_export_fields() {
+  $nodequeues = array();
+
+  // Exported nodequeues: oc_app_featured_apps
+  $nodequeues['oc_app_featured_apps'] = array(
+    'name' => 'oc_app_featured_apps',
+    'title' => 'Featured apps',
+    'subqueue_title' => '',
+    'size' => 5,
+    'link' => 'Show as featured',
+    'link_remove' => 'Remove from featured',
+    'owner' => 'nodequeue',
+    'show_in_ui' => 1,
+    'show_in_tab' => 1,
+    'show_in_links' => 1,
+    'reference' => 0,
+    'reverse' => 0,
+    'i18n' => 0,
+    'subqueues' => 1,
+    'types' => array(
+      0 => 'oc_application',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  return $nodequeues;
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function opencivic_application_image_default_styles() {

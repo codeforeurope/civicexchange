@@ -143,7 +143,7 @@ function opencivic_application_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'text_plain',
+      'formatter' => 'text_default',
       'delta_limit' => '0',
       'delta_offset' => '0',
       'delta_reversed' => 0,

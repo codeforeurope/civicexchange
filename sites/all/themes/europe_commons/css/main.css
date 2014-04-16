@@ -128,6 +128,7 @@ header #block-search-form, header .search-form {
   margin-bottom: 40px; }
   .view-opencivic-application-facet-search .views-row {
     width: 32%;
+    height: 210px;
     display: inline-block;
     vertical-align: top;
     border: 1px solid #c8c8c8;
@@ -184,6 +185,9 @@ header #block-search-form, header .search-form {
   background-color: #f9e829;
   padding: 3px 0 3px 5px; }
 
+#mini-panel-ec_homepage_banner .inside {
+  margin: 0 0 0 0; }
+
 .page-frontpage .pane-title {
   background-color: #f9e829;
   padding-left: 5px;
@@ -191,14 +195,22 @@ header #block-search-form, header .search-form {
 .page-frontpage .block-content {
   padding-left: 5px; }
 .page-frontpage .row-action {
-  background-image: url(../images/action_panel_background.png);
+  background-image: url(../images-source/action_panel_background.png);
   background-position: 10px 0px;
   background-repeat: no-repeat;
   padding: 40px 0;
   margin-bottom: 25px; }
+.page-frontpage #welcome-box {
+  background-image: url(../images-source/action_panel_background.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 330px;
+  padding-top: 20px; }
 .page-frontpage .welcome-box {
   background-color: #f9e829;
-  padding: 15px; }
+  padding: 15px;
+  margin: 15px; }
 .page-frontpage .welcome-msg {
   color: black;
   font-size: 1.9em;
