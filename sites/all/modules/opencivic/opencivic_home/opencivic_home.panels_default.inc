@@ -38,12 +38,13 @@ function opencivic_home_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'left';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:3';
+    $pane->type = 'block';
+    $pane->subtype = 'block-2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'Full',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -58,12 +59,13 @@ function opencivic_home_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:5';
+    $pane->type = 'block';
+    $pane->subtype = 'block-3';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'Full',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -78,12 +80,13 @@ function opencivic_home_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'right';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:4';
+    $pane->type = 'block';
+    $pane->subtype = 'block-4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'Full',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -96,7 +99,7 @@ function opencivic_home_default_panels_mini() {
     $display->content['new-3'] = $pane;
     $display->panels['right'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['ec_homepage_banner'] = $mini;
 
