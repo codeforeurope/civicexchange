@@ -156,6 +156,16 @@ header #block-search-form, header .search-form {
   .view-ec-tweets .table tr, .view-ec-tweets .table td, .view-ec-tweets tbody tr, .view-ec-tweets tbody td {
     border: none; }
 
+.view-story.view-display-id-panel_pane_2 {
+  margin-bottom: 30px; }
+  .view-story.view-display-id-panel_pane_2 .views-row {
+    width: 32%; }
+  .view-story.view-display-id-panel_pane_2 .panopoly-image-half {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 14px; }
+
 .pane-service-links {
   padding-bottom: 15px; }
   .pane-service-links h2 {
@@ -170,6 +180,43 @@ header #block-search-form, header .search-form {
   color: black;
   background-color: #f9e829;
   padding: 3px 0 3px 5px; }
+
+.page-frontpage .pane-title {
+  background-color: #f9e829;
+  padding-left: 5px;
+  margin-bottom: 25px; }
+.page-frontpage .block-content {
+  padding-left: 5px; }
+.page-frontpage .row-action {
+  background-image: url(../images/action_panel_background.png);
+  background-position: 10px 0px;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  margin-bottom: 25px; }
+.page-frontpage .welcome-box {
+  background-color: #f9e829;
+  padding: 15px; }
+.page-frontpage .welcome-msg {
+  color: black;
+  font-size: 1.9em;
+  font-weight: bold;
+  margin: 0 0 0.7em 0;
+  line-height: 1.1em; }
+.page-frontpage .welcome-msg-slogan {
+  font-size: 1.4em; }
+.page-frontpage .welcome-button {
+  color: black;
+  background-color: white;
+  font-size: 18pt;
+  display: inline-block;
+  margin: 0px;
+  padding: 0 5px; }
+.page-frontpage .welcome-main {
+  font-size: 1.4em; }
+  .page-frontpage .welcome-main h1 {
+    font-size: 1.7em;
+    color: black;
+    margin-top: 0; }
 
 .front .section {
   margin-bottom: 15px; }

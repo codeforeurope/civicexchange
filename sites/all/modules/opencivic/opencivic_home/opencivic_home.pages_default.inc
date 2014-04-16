@@ -65,6 +65,15 @@ function opencivic_home_default_page_manager_pages() {
       'secondarycolumn2' => NULL,
       'secondarycolumn3' => NULL,
       'footer' => NULL,
+      'center' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'col_1' => NULL,
+      'col_2' => NULL,
+      'col_3' => NULL,
+      'col_1_' => NULL,
+      'col_2_' => NULL,
+      'col_3_' => NULL,
     ),
   );
   $display->cache = array();
@@ -142,13 +151,14 @@ function opencivic_home_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'column3';
-    $pane->type = 'block';
-    $pane->subtype = 'block-1';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ec_tweets-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
+      'view_settings' => 'fields',
+      'header_type' => 'none',
+      'view_mode' => 'teaser',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -164,25 +174,13 @@ function opencivic_home_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'footer';
     $pane->type = 'views_panes';
-    $pane->subtype = 'home_page_map-panel_pane_1';
+    $pane->subtype = 'story-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'teaser',
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
       'view_settings' => 'fields',
       'header_type' => 'none',
+      'view_mode' => 'teaser',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -198,7 +196,7 @@ function opencivic_home_default_page_manager_pages() {
     $pane->pid = 'new-5';
     $pane->panel = 'footer';
     $pane->type = 'views_panes';
-    $pane->subtype = 'blog-panel_pane_1';
+    $pane->subtype = 'home_page_map-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -230,15 +228,27 @@ function opencivic_home_default_page_manager_pages() {
     $display->panels['footer'][1] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'secondarycolumn1';
+    $pane->panel = 'footer';
     $pane->type = 'views_panes';
-    $pane->subtype = 'story-panel_pane_1';
+    $pane->subtype = 'blog-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'view_mode' => 'teaser',
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
       'view_settings' => 'fields',
       'header_type' => 'none',
-      'view_mode' => 'teaser',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -246,32 +256,34 @@ function opencivic_home_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['secondarycolumn1'][0] = 'new-6';
+    $display->panels['footer'][2] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'secondarycolumn3';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ec_tweets-panel_pane_1';
+    $pane->panel = 'header';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'ec_homepage_banner';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_settings' => 'fields',
-      'header_type' => 'none',
-      'view_mode' => 'teaser',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => 'welcome-box',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['secondarycolumn3'][0] = 'new-7';
+    $display->panels['header'][0] = 'new-7';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
