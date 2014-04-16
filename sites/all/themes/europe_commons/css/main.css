@@ -24,6 +24,9 @@
   .view-replated-deployments .views-row {
     margin-bottom: 10px; }
 
+.field-name-field-oc-app-feature-list .field-item {
+  margin-bottom: 15px; }
+
 nav.navbar-collapse {
   background: #f9e829;
   width: 100%;
