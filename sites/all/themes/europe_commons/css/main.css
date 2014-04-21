@@ -27,6 +27,9 @@
 .field-name-field-oc-app-feature-list .field-item {
   margin-bottom: 15px; }
 
+.navbar-brand {
+  margin-top: 8px; }
+
 nav.navbar-collapse {
   background: #f9e829;
   width: 100%;
