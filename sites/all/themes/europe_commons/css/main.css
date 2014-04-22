@@ -47,6 +47,11 @@
   margin-bottom: 15px;
 }
 
+/* line 47, ../sass/components/_details.sass */
+.node-type-oc-story .field-name-field-oc-featured-image {
+  float: right;
+}
+
 /* line 4, ../sass/components/_menu.sass */
 .navbar-brand {
   margin-top: 8px;

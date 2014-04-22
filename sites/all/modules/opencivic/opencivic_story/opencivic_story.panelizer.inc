@@ -63,7 +63,7 @@ function opencivic_story_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => 'panopoly_image_featured',
+        'image_style' => 'medium',
         'image_link' => '',
       ),
       'context' => array(),
@@ -110,16 +110,18 @@ function opencivic_story_panelizer_defaults() {
     $pane->pid = 'new-3';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_tags';
+    $pane->subtype = 'node:field_oc_story_app_references';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
-      'formatter' => 'taxonomy_term_reference_link',
+      'formatter' => 'entityreference_label',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
+      'formatter_settings' => array(
+        'link' => FALSE,
+      ),
       'context' => 'panelizer',
     );
     $pane->cache = array();
@@ -136,7 +138,7 @@ function opencivic_story_panelizer_defaults() {
     $pane->pid = 'new-4';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_story_app_references';
+    $pane->subtype = 'node:field_oc_story_org_references';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -164,18 +166,16 @@ function opencivic_story_panelizer_defaults() {
     $pane->pid = 'new-5';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_oc_story_org_references';
+    $pane->subtype = 'node:field_oc_tags';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
-      'formatter' => 'entityreference_label',
+      'formatter' => 'taxonomy_term_reference_link',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'link' => FALSE,
-      ),
+      'formatter_settings' => array(),
       'context' => 'panelizer',
     );
     $pane->cache = array();
