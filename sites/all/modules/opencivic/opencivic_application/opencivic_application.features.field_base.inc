@@ -108,7 +108,7 @@ function opencivic_application_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'max_length' => 255,
+      'max_length' => 120,
     ),
     'translatable' => 0,
     'type' => 'text',

@@ -335,7 +335,10 @@ function opencivic_application_field_default_field_instances() {
     'label' => 'Short description',
     'required' => 1,
     'settings' => array(
-      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -344,9 +347,9 @@ function opencivic_application_field_default_field_instances() {
       'module' => 'text',
       'settings' => array(
         'label_help_description' => '',
-        'maxlength_js' => 0,
+        'maxlength_js' => 1,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'size' => 140,
+        'size' => 120,
       ),
       'type' => 'text_textfield',
       'weight' => 3,
