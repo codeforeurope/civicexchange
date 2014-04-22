@@ -38,7 +38,7 @@ function opencivic_home_default_fe_block_boxes() {
   $fe_block_boxes->info = 'EC Welcome box';
   $fe_block_boxes->format = 'panopoly_html_text';
   $fe_block_boxes->machine_name = 'ec_welcome_box';
-  $fe_block_boxes->body = '<div class="welcome-box welcome-main"><h1><span><span style="font-family: Calibri,sans-serif; font-size: small;"><span style="font-size: 11pt;">Welcome to <strong>Civic Exchange</strong></h1>a platform for improving public services by showcasing and promoting the reuse of civic software.</span></span></span></h1></div>';
+  $fe_block_boxes->body = '<div class="welcome-box welcome-main"><h1><span><span style="font-family: Calibri,sans-serif; font-size: small;"><span style="font-size: 11pt;">Welcome to<br/><strong>Civic Exchange</strong></h1>A platform for improving public services by showcasing and promoting the reuse of civic software.</span></span></span></h1></div>';
 
   $export['ec_welcome_box'] = $fe_block_boxes;
 

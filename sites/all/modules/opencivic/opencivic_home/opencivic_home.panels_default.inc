@@ -39,7 +39,7 @@ function opencivic_home_default_panels_mini() {
     $pane->pid = 'new-1';
     $pane->panel = 'left';
     $pane->type = 'block';
-    $pane->subtype = 'block-2';
+    $pane->subtype = 'block-3';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -60,7 +60,7 @@ function opencivic_home_default_panels_mini() {
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'block';
-    $pane->subtype = 'block-3';
+    $pane->subtype = 'block-2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
