@@ -669,9 +669,12 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['fields']['field_oc_deploy_url']['table'] = 'field_data_field_oc_deploy_url';
   $handler->display->display_options['fields']['field_oc_deploy_url']['field'] = 'field_oc_deploy_url';
   $handler->display->display_options['fields']['field_oc_deploy_url']['label'] = '';
+  $handler->display->display_options['fields']['field_oc_deploy_url']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_oc_deploy_url']['alter']['path'] = '[field_oc_deploy_url-url]';
+  $handler->display->display_options['fields']['field_oc_deploy_url']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_oc_deploy_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_oc_deploy_url']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_oc_deploy_url']['type'] = 'link_url';
+  $handler->display->display_options['fields']['field_oc_deploy_url']['type'] = 'link_plain';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
