@@ -128,7 +128,7 @@ function opencivic_story_views_default_views() {
   $handler->display->display_options['fields']['field_oc_featured_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_oc_featured_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_oc_featured_image']['settings'] = array(
-    'image_style' => 'panopoly_image_half',
+    'image_style' => 'ec_recent_story',
     'image_link' => 'content',
   );
   /* Field: Content: Title */

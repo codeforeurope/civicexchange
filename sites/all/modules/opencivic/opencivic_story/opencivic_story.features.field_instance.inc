@@ -70,6 +70,7 @@ function opencivic_story_field_default_field_instances() {
   // Exported field_instance: 'node-oc_story-field_oc_featured_image'
   $field_instances['node-oc_story-field_oc_featured_image'] = array(
     'bundle' => 'oc_story',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -113,7 +114,7 @@ function opencivic_story_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
@@ -135,9 +136,10 @@ function opencivic_story_field_default_field_instances() {
         ),
         'label_help_description' => '',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => 2,
     ),
   );
