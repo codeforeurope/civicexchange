@@ -628,7 +628,7 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['title'] = 'Featured apps';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -692,6 +692,12 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '</div>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Nodequeue: Position */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -714,6 +720,179 @@ function opencivic_application_views_default_views() {
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['filters']['in_queue']['value'] = '1';
+
+  /* Display: List by sector */
+  $handler = $view->new_display('panel_pane', 'List by sector', 'panel_pane_4');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Field: Content: Logo */
+  $handler->display->display_options['fields']['field_oc_logo']['id'] = 'field_oc_logo';
+  $handler->display->display_options['fields']['field_oc_logo']['table'] = 'field_data_field_oc_logo';
+  $handler->display->display_options['fields']['field_oc_logo']['field'] = 'field_oc_logo';
+  $handler->display->display_options['fields']['field_oc_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_oc_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_oc_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_oc_logo']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Short description */
+  $handler->display->display_options['fields']['field_oc_app_description']['id'] = 'field_oc_app_description';
+  $handler->display->display_options['fields']['field_oc_app_description']['table'] = 'field_data_field_oc_app_description';
+  $handler->display->display_options['fields']['field_oc_app_description']['field'] = 'field_oc_app_description';
+  $handler->display->display_options['fields']['field_oc_app_description']['label'] = '';
+  $handler->display->display_options['fields']['field_oc_app_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Civic sector (field_oc_civic_category) */
+  $handler->display->display_options['arguments']['field_oc_civic_category_tid']['id'] = 'field_oc_civic_category_tid';
+  $handler->display->display_options['arguments']['field_oc_civic_category_tid']['table'] = 'field_data_field_oc_civic_category';
+  $handler->display->display_options['arguments']['field_oc_civic_category_tid']['field'] = 'field_oc_civic_category_tid';
+  $handler->display->display_options['arguments']['field_oc_civic_category_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_oc_civic_category_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_oc_civic_category_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_oc_civic_category_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_oc_civic_category_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'oc_application' => 'oc_application',
+  );
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_oc_civic_category_tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Civic sector (field_oc_civic_category)',
+    ),
+  );
+
+  /* Display: Created by org */
+  $handler = $view->new_display('panel_pane', 'Created by org', 'panel_pane_5');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'oc-apps-grid';
+  $handler->display->display_options['display_description'] = 'A list of apps created by an organisation';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Field: Content: Logo */
+  $handler->display->display_options['fields']['field_oc_logo']['id'] = 'field_oc_logo';
+  $handler->display->display_options['fields']['field_oc_logo']['table'] = 'field_data_field_oc_logo';
+  $handler->display->display_options['fields']['field_oc_logo']['field'] = 'field_oc_logo';
+  $handler->display->display_options['fields']['field_oc_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_oc_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_oc_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_oc_logo']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Short description */
+  $handler->display->display_options['fields']['field_oc_app_description']['id'] = 'field_oc_app_description';
+  $handler->display->display_options['fields']['field_oc_app_description']['table'] = 'field_data_field_oc_app_description';
+  $handler->display->display_options['fields']['field_oc_app_description']['field'] = 'field_oc_app_description';
+  $handler->display->display_options['fields']['field_oc_app_description']['label'] = '';
+  $handler->display->display_options['fields']['field_oc_app_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: App creator (field_oc_app_creator) */
+  $handler->display->display_options['arguments']['field_oc_app_creator_target_id']['id'] = 'field_oc_app_creator_target_id';
+  $handler->display->display_options['arguments']['field_oc_app_creator_target_id']['table'] = 'field_data_field_oc_app_creator';
+  $handler->display->display_options['arguments']['field_oc_app_creator_target_id']['field'] = 'field_oc_app_creator_target_id';
+  $handler->display->display_options['arguments']['field_oc_app_creator_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_oc_app_creator_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_oc_app_creator_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_oc_app_creator_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_oc_app_creator_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'oc_application' => 'oc_application',
+  );
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_oc_app_creator_target_id' => array(
+      'type' => 'panel',
+      'context' => 'entity:comment.author',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: App creator (field_oc_app_creator)',
+    ),
+  );
   $export['application_list'] = $view;
 
   $view = new view();

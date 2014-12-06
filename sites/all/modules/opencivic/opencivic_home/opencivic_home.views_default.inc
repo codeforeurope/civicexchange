@@ -309,42 +309,52 @@ function opencivic_home_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'table';
-  $handler->display->display_options['style_options']['columns'] = array(
-    'profile_image_url' => 'profile_image_url',
-    'text' => 'text',
-    'created_time' => 'text',
-  );
-  $handler->display->display_options['style_options']['default'] = '-1';
-  $handler->display->display_options['style_options']['info'] = array(
-    'profile_image_url' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'text' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => ' - ',
-      'empty_column' => 0,
-    ),
-    'created_time' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-  );
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'text' => 'text',
+    'created_time' => 'created_time',
+  );
+  $handler->display->display_options['row_options']['separator'] = ' &#8212; ';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = 'Tweet us <a href="https://twitter.com/CivExchange">@civexchange</a>.';
+  $handler->display->display_options['footer']['area']['format'] = 'panopoly_html_text';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Twitter: Created time */
+  $handler->display->display_options['fields']['created_time']['id'] = 'created_time';
+  $handler->display->display_options['fields']['created_time']['table'] = 'twitter';
+  $handler->display->display_options['fields']['created_time']['field'] = 'created_time';
+  $handler->display->display_options['fields']['created_time']['label'] = '';
+  $handler->display->display_options['fields']['created_time']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created_time']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created_time']['date_format'] = 'time ago';
+  /* Field: Twitter: Profile image */
+  $handler->display->display_options['fields']['profile_image_url']['id'] = 'profile_image_url';
+  $handler->display->display_options['fields']['profile_image_url']['table'] = 'twitter_account';
+  $handler->display->display_options['fields']['profile_image_url']['field'] = 'profile_image_url';
+  $handler->display->display_options['fields']['profile_image_url']['label'] = '';
+  /* Field: Twitter: Message text */
+  $handler->display->display_options['fields']['text']['id'] = 'text';
+  $handler->display->display_options['fields']['text']['table'] = 'twitter';
+  $handler->display->display_options['fields']['text']['field'] = 'text';
+  $handler->display->display_options['fields']['text']['label'] = '';
+  $handler->display->display_options['fields']['text']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['text']['alter']['text'] = '[text] - [created_time]';
+  $handler->display->display_options['fields']['text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['text']['link_urls'] = 1;
+  $handler->display->display_options['fields']['text']['link_usernames'] = 1;
+  $handler->display->display_options['fields']['text']['link_hashtags'] = 1;
+  $handler->display->display_options['fields']['text']['link_attributes'] = 1;
   $export['ec_tweets'] = $view;
 
   $view = new view();

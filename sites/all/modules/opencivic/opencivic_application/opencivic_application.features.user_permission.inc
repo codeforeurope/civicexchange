@@ -62,35 +62,48 @@ function opencivic_application_user_default_permissions() {
   // Exported permission: 'create oc_application content'.
   $permissions['create oc_application content'] = array(
     'name' => 'create oc_application content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any oc_application content'.
   $permissions['delete any oc_application content'] = array(
     'name' => 'delete any oc_application content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own oc_application content'.
   $permissions['delete own oc_application content'] = array(
     'name' => 'delete own oc_application content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any oc_application content'.
   $permissions['edit any oc_application content'] = array(
     'name' => 'edit any oc_application content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own oc_application content'.
   $permissions['edit own oc_application content'] = array(
     'name' => 'edit own oc_application content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 

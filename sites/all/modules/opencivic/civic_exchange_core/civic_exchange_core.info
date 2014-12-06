@@ -1,0 +1,15 @@
+name = Civic Exchange Core
+description = Elements needed as customizations for Civic Exchange.
+core = 7.x
+package = OpenCivic
+version = 7.x-1.0-alpha1
+project = civic_exchange_core
+dependencies[] = views
+dependencies[] = views_content
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = civic_exchange_editors
+features[views_view][] = civic_exchange_feed
+features[views_view][] = civic_exchange_sectors
+features_exclude[dependencies][ctools] = ctools
+project path = sites/all/modules/opencivic

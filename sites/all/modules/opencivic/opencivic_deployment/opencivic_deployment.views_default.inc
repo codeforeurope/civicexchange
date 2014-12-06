@@ -275,6 +275,7 @@ function opencivic_deployment_views_default_views() {
   $handler = $view->new_display('block', 'Recent deployments', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Recent deployments';
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -348,6 +349,24 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: App deployed */
+  $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['id'] = 'field_oc_deploy_deployment_of_target_id';
+  $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['table'] = 'field_data_field_oc_deploy_deployment_of';
+  $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['field'] = 'field_oc_deploy_deployment_of_target_id';
+  $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['ui_name'] = 'App deployed';
+  $handler->display->display_options['relationships']['field_oc_deploy_deployment_of_target_id']['label'] = 'App deployed';
+  /* Relationship: Developer */
+  $handler->display->display_options['relationships']['field_oc_deploy_member_target_id']['id'] = 'field_oc_deploy_member_target_id';
+  $handler->display->display_options['relationships']['field_oc_deploy_member_target_id']['table'] = 'field_data_field_oc_deploy_member';
+  $handler->display->display_options['relationships']['field_oc_deploy_member_target_id']['field'] = 'field_oc_deploy_member_target_id';
+  $handler->display->display_options['relationships']['field_oc_deploy_member_target_id']['ui_name'] = 'Developer';
+  $handler->display->display_options['relationships']['field_oc_deploy_member_target_id']['label'] = 'Developer';
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_oc_deploy_member_target_id_1']['id'] = 'field_oc_deploy_member_target_id_1';
+  $handler->display->display_options['relationships']['field_oc_deploy_member_target_id_1']['table'] = 'field_data_field_oc_deploy_member';
+  $handler->display->display_options['relationships']['field_oc_deploy_member_target_id_1']['field'] = 'field_oc_deploy_member_target_id';
+  $handler->display->display_options['relationships']['field_oc_deploy_member_target_id_1']['label'] = 'Organisations involved';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Add deployment of */
   $handler->display->display_options['fields']['field_oc_deploy_deployment_of']['id'] = 'field_oc_deploy_deployment_of';
@@ -381,7 +400,23 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['fields']['field_oc_deploy_url']['label'] = '';
   $handler->display->display_options['fields']['field_oc_deploy_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_oc_deploy_url']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_oc_deploy_url']['type'] = 'link_url';
+  $handler->display->display_options['fields']['field_oc_deploy_url']['type'] = 'link_domain';
+  $handler->display->display_options['fields']['field_oc_deploy_url']['settings'] = array(
+    'strip_www' => 0,
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['relationship'] = 'field_oc_deploy_member_target_id_1';
+  $handler->display->display_options['fields']['title_field']['label'] = 'Organisations';
+  $handler->display->display_options['fields']['title_field']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['title_field']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+  );
+  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -518,9 +553,9 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['style_options']['name_field'] = 'title';
   $handler->display->display_options['style_options']['description_field'] = 'title';
   $handler->display->display_options['style_options']['map'] = 'OSM Mapnik';
-  $handler->display->display_options['style_options']['zoom']['initialZoom'] = '6';
+  $handler->display->display_options['style_options']['zoom']['initialZoom'] = '-1';
   $handler->display->display_options['style_options']['zoom']['minZoom'] = '0';
-  $handler->display->display_options['style_options']['zoom']['maxZoom'] = '18';
+  $handler->display->display_options['style_options']['zoom']['maxZoom'] = '7';
   $handler->display->display_options['style_options']['vector_display']['stroke'] = 0;
   $handler->display->display_options['style_options']['vector_display']['fill'] = 0;
   $handler->display->display_options['style_options']['vector_display']['clickable'] = 0;
@@ -571,6 +606,10 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_oc_deploy_location' => 'field_oc_deploy_location',
+    'title_field' => 'title_field',
+  );
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -650,6 +689,13 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_oc_deploy_location']['id'] = 'field_oc_deploy_location';
   $handler->display->display_options['fields']['field_oc_deploy_location']['table'] = 'field_data_field_oc_deploy_location';
@@ -657,13 +703,24 @@ function opencivic_deployment_views_default_views() {
   $handler->display->display_options['fields']['field_oc_deploy_location']['label'] = '';
   $handler->display->display_options['fields']['field_oc_deploy_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_oc_deploy_location']['click_sort_column'] = 'country';
-  $handler->display->display_options['fields']['field_oc_deploy_location']['type'] = 'addressfield_city_only';
+  $handler->display->display_options['fields']['field_oc_deploy_location']['type'] = 'addressfield_citystate';
   $handler->display->display_options['fields']['field_oc_deploy_location']['settings'] = array(
     'use_widget_handlers' => 1,
     'format_handlers' => array(
       'address' => 'address',
     ),
   );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['label'] = '';
+  $handler->display->display_options['fields']['title_field']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title_field']['alter']['text'] = 'Edit';
+  $handler->display->display_options['fields']['title_field']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title_field']['alter']['path'] = 'node/[nid]/edit';
+  $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 0;
   /* Field: Content: Website */
   $handler->display->display_options['fields']['field_oc_deploy_url']['id'] = 'field_oc_deploy_url';
   $handler->display->display_options['fields']['field_oc_deploy_url']['table'] = 'field_data_field_oc_deploy_url';

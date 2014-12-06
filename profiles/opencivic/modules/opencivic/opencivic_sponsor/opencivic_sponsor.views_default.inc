@@ -39,6 +39,7 @@ function opencivic_sponsor_views_default_views() {
   $handler->display->display_options['fields']['field_oc_sponsor_url']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_oc_sponsor_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_oc_sponsor_url']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_oc_sponsor_url']['type'] = 'link_absolute';
   /* Field: Content: Logo */
   $handler->display->display_options['fields']['field_oc_logo']['id'] = 'field_oc_logo';
   $handler->display->display_options['fields']['field_oc_logo']['table'] = 'field_data_field_oc_logo';

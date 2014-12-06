@@ -10,6 +10,8 @@ regions[footer] = Footer
 
 stylesheets[all][] = css/main.css
 
+stylesheets[all][] = css/font-awesome.min.css
+
 features[] = logo
 features[] = name
 features[] = slogan
@@ -18,3 +20,5 @@ features[] = main_menu
 features[] = secondary_menu
 
 plugins[panels][layouts] = layouts
+
+scripts[] = js/wp8-ie10-fix.js

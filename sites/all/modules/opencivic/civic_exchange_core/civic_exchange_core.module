@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Civic Exchange Core feature.
+ */
+
+include_once 'civic_exchange_core.features.inc';

@@ -25,6 +25,7 @@ features[features_api][] = api:2
 features[page_manager_pages][] = frontpage
 features[panels_layout][] = ec_homepage_banner
 features[panels_mini][] = ec_homepage_banner
+features[panels_mini][] = ec_homepage_banner_2
 features[views_view][] = ec_tweets
 features[views_view][] = home_page_map
 features[views_view][] = homepage_latest

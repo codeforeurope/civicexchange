@@ -289,7 +289,7 @@ function opencivic_organization_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_oc_org_additional_type',
-    'label' => 'Organization type',
+    'label' => 'Organisation type',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -299,7 +299,7 @@ function opencivic_organization_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'label_help_description' => 'What type of organization is it?',
+        'label_help_description' => 'What type of organisation is it?',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
@@ -1276,7 +1276,7 @@ function opencivic_organization_field_default_field_instances() {
   t('Logo');
   t('Members');
   t('Name');
-  t('Organization type');
+  t('Organisation type');
   t('Physical address of the item.');
   t('Services');
   t('Telephone');

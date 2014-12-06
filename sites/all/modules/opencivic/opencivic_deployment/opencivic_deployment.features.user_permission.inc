@@ -62,35 +62,45 @@ function opencivic_deployment_user_default_permissions() {
   // Exported permission: 'create oc_deployment content'.
   $permissions['create oc_deployment content'] = array(
     'name' => 'create oc_deployment content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any oc_deployment content'.
   $permissions['delete any oc_deployment content'] = array(
     'name' => 'delete any oc_deployment content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own oc_deployment content'.
   $permissions['delete own oc_deployment content'] = array(
     'name' => 'delete own oc_deployment content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any oc_deployment content'.
   $permissions['edit any oc_deployment content'] = array(
     'name' => 'edit any oc_deployment content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own oc_deployment content'.
   $permissions['edit own oc_deployment content'] = array(
     'name' => 'edit own oc_deployment content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 

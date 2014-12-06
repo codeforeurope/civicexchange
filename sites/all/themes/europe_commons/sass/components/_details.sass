@@ -3,6 +3,9 @@
 // Application details
 
 .node-type-oc-application
+  .pane-title
+    margin-top: 33px
+
   .panopoly-image-quarter
     float: none
     display: inline-block
@@ -15,6 +18,12 @@
     font-size: 14px
     color: #6F6F6F
     margin: 20px 0 3px 0
+
+  .field-name-field-oc-app-screenshot
+    .field-item
+      // float: left
+      display: inline-block
+      // width: 20%
 
   .burr-flipped-sidebar-content
     ul.links
@@ -33,12 +42,25 @@
 .view-replated-deployments
   margin-bottom: 20px
   .views-row
+    border-bottom: 1px solid #E0E0E0
     margin-bottom: 10px
+    .views-field-title-field
+      font-size: 0.6em
+      a
+        color: #A0A0A0
+    .views-field-field-oc-deploy-location
+      color: #000
+      font-size: 18px
 
 .field-name-field-oc-app-feature-list
   .field-item
     margin-bottom: 15px
 
+.service-links
+  font-size: 0.8em
+
+.pane-node-field-oc-app-screenshot
+  margin-bottom: 20px
 
 // ----------------------------------------------------------------------------
 // Story details
@@ -46,4 +68,4 @@
 .node-type-oc-story
   .field-name-field-oc-featured-image
     float: right
-    // display: inline-block
+    margin: 0 0 10px 10px

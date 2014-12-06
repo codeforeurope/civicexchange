@@ -12,11 +12,16 @@ nav.navbar-collapse
 .navbar-default
   background: transparent
   border: none
-  nav
-    float: left
+
+.navbar-nav
+  float: none
 
 .navbar-default .navbar-nav
   height: $nav-height
+  @include respond-to(handhelds)
+    height: auto
+  @include respond-to(medium-screens)
+    height: auto
   // width: 150px
   // line-height: 40px
   //TODO
@@ -31,8 +36,8 @@ nav.navbar-collapse
       font-family: $heading-font
       font-weight: normal !important
       // text-transform: uppercase;
-      font-size: 1.2em
-      padding: 10px 0px 0 23px
+      font-size: 1.1em
+      padding: 7px 0px 0 23px
       height: $nav-height
     .active
       background: transparent
@@ -60,13 +65,13 @@ nav.navbar-collapse
     background: transparent url(../images-source/blog_dwn.png) no-repeat left center
   li.li-1219:hover
     background: transparent url(../images-source/blog_up.png) no-repeat left center
-  li.li-1434
+  li.li-1590
     background: transparent url(../images-source/about_dwn.png) no-repeat left center
-  li.li-1434:hover
+  li.li-1590:hover
     background: transparent url(../images-source/about_up.png) no-repeat left center
-  li.li-1145
+  li.li-1438
     background: transparent url(../images-source/sign_up.png) no-repeat left center
-  li.li-1145:hover
+  li.li-1438:hover
     background: transparent url(../images-source/sign_dwn.png) no-repeat left center
 
       // @include box-shadow(#900 0 0 10px inset);
@@ -76,7 +81,37 @@ nav.navbar-collapse
   // #block-menu-menu-social-links
   //   float: right
   //   margin: 0
+  //
+header.navbar.navbar-default .nav.navbar-nav
+  .last.li-1673
+    float: right
+    // position: absolute
+    // right: 1px
+    background-color: #DBDBDB
+    margin-right: 1px
+    padding-right: 20px
+
+.header-right
+  float: right
+  @include respond-to(handhelds)
+    width: 100%
+    float: none
 
 #secondary-menu-links
+  background: transparent
+  align-content: right
   float: right
+  margin-right: 30px
+  font-size: 0.9em
+
+  li
+    padding: 0px 0px 0 0px
+    margin: 0 0px 0 13px
+    a
+      padding: 2px 0px 0 5px
+
+  @include respond-to(handhelds)
+    width: 100%
+    float: none
+
 

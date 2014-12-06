@@ -37,7 +37,7 @@ function opencivic_search_default_search_api_index() {
       "fields" : {
         "nid" : { "type" : "integer" },
         "type" : { "type" : "string" },
-        "title" : { "type" : "text" },
+        "title" : { "type" : "string" },
         "status" : { "type" : "integer" },
         "field_oc_app_category" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_oc_civic_category" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
@@ -122,6 +122,7 @@ function opencivic_search_default_search_api_index() {
     },
     "enabled" : "1",
     "read_only" : "0",
+    "microdata" : { "#attributes" : { "itemscope" : "" } },
     "rdf_mapping" : []
   }');
   return $items;

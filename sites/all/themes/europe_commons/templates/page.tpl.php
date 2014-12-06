@@ -126,9 +126,44 @@
       <div id="header" class="">
         <?php print render($page['header']); ?>
       </div>
-      <?php if ($search_form): ?>
-    <?php print $search_form; ?>
-<?php endif; ?>
+
+      <div class="header-right">
+
+        <div class="header-top-line-right">
+        <div class="media-icons">
+          <a href="/feed"><i class="fa fa-rss fa-2x"></i></a>
+          <a href="http://twitter.com/CivExchange"><i class="fa fa-twitter fa-2x"></i></a>
+        </div>
+
+        <?php
+            $sec_attributes = array(
+              'id' => 'secondary-menu-links',
+              'class' => array('nav', 'navbar-nav', 'secondary-links'),
+            );
+            if (!$secondary_menu) {
+              $sec_attributes['class'][] = 'element-invisible';
+            }
+          ?>
+
+        <?php print theme('links__system_secondary_menu', array(
+            'links' => $secondary_menu,
+            'attributes' => $sec_attributes,
+            'heading' => array(
+              'text' => t('Secondary menu'),
+              'level' => 'h2',
+              'class' => array('element-invisible'),
+            ),
+          )); ?>
+          </div>
+
+            <div>
+        <?php if ($search_form): ?>
+          <?php print $search_form; ?>
+        <?php endif; ?>
+</div>
+
+
+      </div>
 
       <nav class="collapse navbar-collapse <?php if (!$main_menu && !$secondary_menu) { print 'element-invisible'; } ?>" role="navigation">
         <?php
@@ -154,25 +189,9 @@
           ),
         )); ?>
 
-        <?php
-          $sec_attributes = array(
-            'id' => 'secondary-menu-links',
-            'class' => array('nav', 'navbar-nav', 'secondary-links'),
-          );
-          if (!$secondary_menu) {
-            $sec_attributes['class'][] = 'element-invisible';
-          }
-        ?>
 
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => $sec_attributes,
-          'heading' => array(
-            'text' => t('Secondary menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
+
+
       </nav>
 
     </div>

@@ -67,6 +67,52 @@ function opencivic_story_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-oc_story-field_oc_civic_category'
+  $field_instances['node-oc_story-field_oc_civic_category'] = array(
+    'bundle' => 'oc_story',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_oc_civic_category',
+    'label' => 'Civic sector',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'label_help_description' => '',
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-oc_story-field_oc_featured_image'
   $field_instances['node-oc_story-field_oc_featured_image'] = array(
     'bundle' => 'oc_story',
@@ -211,7 +257,7 @@ function opencivic_story_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -282,7 +328,7 @@ function opencivic_story_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -395,6 +441,7 @@ function opencivic_story_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('App references');
   t('Body');
+  t('Civic sector');
   t('Image');
   t('Organization references');
   t('Tags');

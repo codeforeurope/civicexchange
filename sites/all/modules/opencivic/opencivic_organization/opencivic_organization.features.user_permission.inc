@@ -87,6 +87,7 @@ function opencivic_organization_user_default_permissions() {
     'name' => 'create oc_organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -96,6 +97,7 @@ function opencivic_organization_user_default_permissions() {
     'name' => 'delete any oc_organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -105,6 +107,7 @@ function opencivic_organization_user_default_permissions() {
     'name' => 'delete own oc_organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -114,6 +117,7 @@ function opencivic_organization_user_default_permissions() {
     'name' => 'edit any oc_organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -123,6 +127,7 @@ function opencivic_organization_user_default_permissions() {
     'name' => 'edit own oc_organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );

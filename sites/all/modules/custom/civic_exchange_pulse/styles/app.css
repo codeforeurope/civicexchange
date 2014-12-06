@@ -1,0 +1,67 @@
+/* line 4, ../../app/styles/app.scss */
+.organization {
+  margin-bottom: 20px;
+}
+
+/* line 24, ../../app/styles/app.scss */
+.project {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-top: 1px solid #dddddd;
+}
+/* line 29, ../../app/styles/app.scss */
+.project .name, .project .recent, .project .owner {
+  display: inline-block;
+}
+/* line 33, ../../app/styles/app.scss */
+.project .name, .project .owner {
+  color: #000;
+}
+/* line 37, ../../app/styles/app.scss */
+.project .metric {
+  margin-top: 30px;
+  margin-left: 20px;
+  color: #888888;
+  font-weight: bold;
+  float: right;
+}
+/* line 45, ../../app/styles/app.scss */
+.project .owner_avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+/* line 50, ../../app/styles/app.scss */
+.project .owner {
+  vertical-align: bottom;
+}
+
+/* line 55, ../../app/styles/app.scss */
+.recent {
+  background-color: #FFFFCC;
+  display: inline-block;
+  padding: 3px;
+}
+
+/* line 61, ../../app/styles/app.scss */
+.data {
+  margin-bottom: 0;
+}
+
+/* line 65, ../../app/styles/app.scss */
+.bold-xxlarge {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+/* line 70, ../../app/styles/app.scss */
+.bold-xlarge {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* line 75, ../../app/styles/app.scss */
+.bold-small {
+  font-size: 16px;
+  font-weight: 700;
+}

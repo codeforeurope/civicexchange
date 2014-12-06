@@ -7,6 +7,9 @@ class UserMigration extends DrupalUser7Migration {
 
     $this->addFieldMapping('roles', 'roles')
       ->sourceMigration('role');
+
+    $this->addFieldMapping('field_ec_user_description', 'field_user_description');
+    $this->addFieldMapping('field_ec_user_organization', 'field_user_organization');
   }
 }
 

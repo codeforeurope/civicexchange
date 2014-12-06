@@ -1,4 +1,5 @@
 
+
 .pane-service-links
   padding-bottom: 15px
   h2
@@ -25,6 +26,15 @@
 #mini-panel-ec_homepage_banner
   .inside
     margin: 0 0 0 0
+
+
+.pane-ec-homepage-banner
+  @include respond-to(handhelds)
+    display: none
+  @include respond-to(medium-screens)
+    display: none
+    // background-color: green
+
 .page-frontpage
   .pane-title
     background-color: $color-yellow
@@ -45,12 +55,16 @@
     background-position: 0px 0px
     background-repeat: no-repeat
     background-size: 100%
+    width: 367px
     height: 330px
     padding-top: 20px
   .welcome-box // .block-content
-    background-color: $color-yellow
+    background-color: $color-grey
     padding: 15px
-    margin: 15px
+    // margin: 15px
+    max-height: 260px
+    height: 260px
+    border-left: 5px solid $color-yellow
 
   .welcome-msg
     color: #000
@@ -80,5 +94,60 @@
       color: #000
       margin-top: 0
     font-size: 1.4em
+
+  @include respond-to(handhelds)
+    .welcome-main
+      display: none
+
+// ----------------------------------------------------------------------------
+// Frontpage highlight
+
+#mini-panel-ec_homepage_banner_2
+  // .col-md-8 .burr-flipped-main-content
+  .burr-flipped-main-content
+    padding-left: 0px
+  .burr-flipped-sidebar-content
+    padding-right: 0px
+
+.view-opencivic-highlight
+  .highlight-text
+    position: absolute
+    display: inline-block
+    max-width: 80%
+    bottom: -5px
+    background-color: #fff
+    padding: 5px
+
+  .highlight-title
+    // a
+    font-size: 24px
+    // background-color: #fff
+    display: inline-block
+    padding: 10px
+
+  .highlight-summary
+    font-size: 18px
+    // background-color: #fff
+    display: inline-block
+    padding: 5px 5px 5px 0
+    // max-width: 80%
+
+  @include respond-to(handhelds)
+    .highlight-text
+      position: relative
+      padding: 0px
+    .highlight-title
+      padding-left: 0px
+
+
+.header-top-line-right
+  margin-top: 5px
+
+.media-icons
+  display: inline-block
+  float: right
+  .fa-rss
+    margin-right: 8px
+
 
 

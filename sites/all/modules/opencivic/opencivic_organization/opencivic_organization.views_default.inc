@@ -101,7 +101,7 @@ function opencivic_organization_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Organization type (field_oc_org_additional_type) */
+  /* Filter criterion: Content: Organisation type (field_oc_org_additional_type) */
   $handler->display->display_options['filters']['field_oc_org_additional_type_tid']['id'] = 'field_oc_org_additional_type_tid';
   $handler->display->display_options['filters']['field_oc_org_additional_type_tid']['table'] = 'field_data_field_oc_org_additional_type';
   $handler->display->display_options['filters']['field_oc_org_additional_type_tid']['field'] = 'field_oc_org_additional_type_tid';

@@ -28,7 +28,7 @@ function opencivic_search_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '30';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
@@ -38,7 +38,7 @@ function opencivic_search_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'We are working to build the most complete and up-to-date database of civic software — both the apps themselves and where they are used. You can help by adding a new app or by linking information about a place where an existing app has been deployed and used.';
+  $handler->display->display_options['header']['area']['content'] = 'We are working to build a showcase of effective civic software that displays evidence of impact. The site features the apps and digital services themselves, as well as where they are being used. You can help by adding a new app or by linking information about a place where an existing app has been deployed.';
   $handler->display->display_options['header']['area']['format'] = 'panopoly_wysiwyg_text';
   /* Field: Indexed Node: Logo */
   $handler->display->display_options['fields']['field_oc_logo']['id'] = 'field_oc_logo';
@@ -48,7 +48,7 @@ function opencivic_search_views_default_views() {
   $handler->display->display_options['fields']['field_oc_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_oc_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_oc_logo']['settings'] = array(
-    'image_style' => 'small_square_thumbnail',
+    'image_style' => 'thumbnail',
     'image_link' => 'content',
   );
   /* Field: Indexed Node: Title */
@@ -64,6 +64,10 @@ function opencivic_search_views_default_views() {
   $handler->display->display_options['fields']['field_oc_app_description']['field'] = 'field_oc_app_description';
   $handler->display->display_options['fields']['field_oc_app_description']['label'] = '';
   $handler->display->display_options['fields']['field_oc_app_description']['element_label_colon'] = FALSE;
+  /* Sort criterion: Indexed Node: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'search_api_index_opencivic_search';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_opencivic_search';

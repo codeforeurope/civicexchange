@@ -1,0 +1,76 @@
+<?php
+/**
+ * @file
+ * An example field using the Field Types API.
+ */
+
+/**
+ * Implementation of hook_menu().
+ */
+function civic_exchange_pulse_menu() {
+  $items = array();
+
+  $items['developers'] = array(
+    'title' => 'Developers (alpha)',
+    'description' => 'Project activity across government organisations',
+    'page callback' => 'civic_exchange_pulse_add_dataset',
+    'page arguments' => array(),
+    'access arguments' => array('access content')
+  );
+
+  $items['views'] = array(
+    'page callback' => 'civic_exchange_pulse_get_angular_view',
+    'access arguments' => array('access content')
+  );
+
+  return $items;
+}
+
+function civic_exchange_pulse_add_dataset() {
+  $content = array();
+
+  //TODO: move to libraries
+  $content['#attached']['js'] = array(
+    drupal_get_path('module', 'civic_exchange_pulse') .'/scripts/vendor.js',
+    drupal_get_path('module', 'civic_exchange_pulse') .'/scripts/scripts.js',
+  );
+
+  $content['#attached']['css'] = array(
+    drupal_get_path('module', 'civic_exchange_pulse') .'/styles/vendor.css',
+    drupal_get_path('module', 'civic_exchange_pulse') .'/styles/main.css',
+    drupal_get_path('module', 'civic_exchange_pulse') .'/styles/app.css',
+  );
+
+  $content['divapp'] = array(
+    '#markup' => '
+  <div ng-app="civicpulseApp">
+    <p style="font-size: 1.2em">See what government open source software has been worked on recently. We think <a target="_blank" href="https://gds.blog.gov.uk/2014/08/22/how-sharing-helps-us-improve-digital-services/">sharing is better</a>.</p>
+
+    <p>More projects will load as you scroll.</p>
+    <!-- Add your site or application content here -->
+    <div class="container">
+      <ul class="nav nav-tabs" role="tablist">
+        <li ng-class="{active: activeTab == \'activity\'}"><a href="#/activity">Activity</a></li>
+        <li ng-class="{active: activeTab == \'orgs\'}"><a href="#/orgs">Organizations</a></li>
+      </ul>
+
+      <div ng-view=""></div>
+
+    </div>
+  </div>
+',
+  );
+
+  return $content;
+}
+
+/**
+ * Suppports retrieving partials for the Angular wizard steps.
+ *
+ * TODO: improve integration.
+ */
+function civic_exchange_pulse_get_angular_view($filename) {
+  $file = file_get_contents(DRUPAL_ROOT . '/' . drupal_get_path('module', 'civic_exchange_pulse') . '/views/' . $filename);
+  print $file;
+  exit(0);
+}

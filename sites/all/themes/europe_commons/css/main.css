@@ -1,55 +1,93 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+/* line 29, ../sass/includes/_base.sass */
+h4 {
+  margin-top: 29px;
+}
+
 /* line 6, ../sass/components/_details.sass */
+.node-type-oc-application .pane-title {
+  margin-top: 33px;
+}
+/* line 9, ../sass/components/_details.sass */
 .node-type-oc-application .panopoly-image-quarter {
   float: none;
   display: inline-block;
 }
-/* line 11, ../sass/components/_details.sass */
+/* line 14, ../sass/components/_details.sass */
 .node-type-oc-application .field-name-field-oc-logo .panopoly-image-quarter {
   float: right;
 }
-/* line 14, ../sass/components/_details.sass */
+/* line 17, ../sass/components/_details.sass */
 .node-type-oc-application .field-label {
   font-size: 14px;
   color: #6f6f6f;
   margin: 20px 0 3px 0;
 }
-/* line 20, ../sass/components/_details.sass */
+/* line 23, ../sass/components/_details.sass */
+.node-type-oc-application .field-name-field-oc-app-screenshot .field-item {
+  display: inline-block;
+}
+/* line 29, ../sass/components/_details.sass */
 .node-type-oc-application .burr-flipped-sidebar-content ul.links {
   padding: 0;
   margin-bottom: 0;
 }
-/* line 23, ../sass/components/_details.sass */
+/* line 32, ../sass/components/_details.sass */
 .node-type-oc-application .burr-flipped-sidebar-content ul.links li {
   list-style-type: none;
   display: inline;
 }
-/* line 27, ../sass/components/_details.sass */
+/* line 36, ../sass/components/_details.sass */
 .node-type-oc-application .burr-flipped-sidebar-content ul.links li:after {
   content: ", ";
 }
-/* line 29, ../sass/components/_details.sass */
+/* line 38, ../sass/components/_details.sass */
 .node-type-oc-application .burr-flipped-sidebar-content ul.links li:last-child:after {
   content: "";
 }
 
-/* line 33, ../sass/components/_details.sass */
+/* line 42, ../sass/components/_details.sass */
 .view-replated-deployments {
   margin-bottom: 20px;
 }
-/* line 35, ../sass/components/_details.sass */
+/* line 44, ../sass/components/_details.sass */
 .view-replated-deployments .views-row {
+  border-bottom: 1px solid #e0e0e0;
   margin-bottom: 10px;
 }
+/* line 47, ../sass/components/_details.sass */
+.view-replated-deployments .views-row .views-field-title-field {
+  font-size: 0.6em;
+}
+/* line 49, ../sass/components/_details.sass */
+.view-replated-deployments .views-row .views-field-title-field a {
+  color: #a0a0a0;
+}
+/* line 51, ../sass/components/_details.sass */
+.view-replated-deployments .views-row .views-field-field-oc-deploy-location {
+  color: black;
+  font-size: 18px;
+}
 
-/* line 39, ../sass/components/_details.sass */
+/* line 56, ../sass/components/_details.sass */
 .field-name-field-oc-app-feature-list .field-item {
   margin-bottom: 15px;
 }
 
-/* line 47, ../sass/components/_details.sass */
+/* line 59, ../sass/components/_details.sass */
+.service-links {
+  font-size: 0.8em;
+}
+
+/* line 62, ../sass/components/_details.sass */
+.pane-node-field-oc-app-screenshot {
+  margin-bottom: 20px;
+}
+
+/* line 69, ../sass/components/_details.sass */
 .node-type-oc-story .field-name-field-oc-featured-image {
   float: right;
+  margin: 0 0 10px 10px;
 }
 
 /* line 4, ../sass/components/_menu.sass */
@@ -69,133 +107,194 @@ nav.navbar-collapse {
   background: transparent;
   border: none;
 }
-/* line 15, ../sass/components/_menu.sass */
-.navbar-default nav {
-  float: left;
+
+/* line 16, ../sass/components/_menu.sass */
+.navbar-nav {
+  float: none;
 }
 
-/* line 18, ../sass/components/_menu.sass */
+/* line 19, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav {
   height: 40px;
   background: #f9e829;
 }
-/* line 25, ../sass/components/_menu.sass */
+@media only screen and (max-width: 600px) {
+  /* line 19, ../sass/components/_menu.sass */
+  .navbar-default .navbar-nav {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 19, ../sass/components/_menu.sass */
+  .navbar-default .navbar-nav {
+    height: auto;
+  }
+}
+/* line 30, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li {
   margin-right: 35px;
 }
-/* line 29, ../sass/components/_menu.sass */
+/* line 34, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li a {
   color: black;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: normal !important;
-  font-size: 1.2em;
-  padding: 10px 0px 0 23px;
+  font-size: 1.1em;
+  padding: 7px 0px 0 23px;
   height: 40px;
 }
-/* line 37, ../sass/components/_menu.sass */
+/* line 42, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li .active {
   background: transparent;
 }
-/* line 39, ../sass/components/_menu.sass */
+/* line 44, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li .active a {
   color: black;
 }
-/* line 44, ../sass/components/_menu.sass */
+/* line 49, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li .active:hover {
   background: transparent;
 }
-/* line 47, ../sass/components/_menu.sass */
+/* line 52, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li.li-138, .navbar-default .navbar-nav li.li-138:active {
   background: transparent url(../images-source/home_dwn.png) no-repeat left center;
 }
-/* line 49, ../sass/components/_menu.sass */
+/* line 54, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li.li-138:hover {
   background: transparent url(../images-source/home_up.png) no-repeat left center;
 }
-/* line 51, ../sass/components/_menu.sass */
+/* line 56, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li.li-1208 {
   background: transparent url(../images-source/app_dwn.png) no-repeat left center;
 }
-/* line 53, ../sass/components/_menu.sass */
+/* line 58, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li.li-1208:hover {
   background: transparent url(../images-source/app_up.png) no-repeat left center;
 }
-/* line 55, ../sass/components/_menu.sass */
+/* line 60, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li.li-140 {
   background: transparent url(../images-source/org_dwn.png) no-repeat left center;
 }
-/* line 57, ../sass/components/_menu.sass */
+/* line 62, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li.li-140:hover {
   background: transparent url(../images-source/org_up.png) no-repeat left center;
 }
-/* line 59, ../sass/components/_menu.sass */
+/* line 64, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li.li-1219 {
   background: transparent url(../images-source/blog_dwn.png) no-repeat left center;
 }
-/* line 61, ../sass/components/_menu.sass */
+/* line 66, ../sass/components/_menu.sass */
 .navbar-default .navbar-nav li.li-1219:hover {
   background: transparent url(../images-source/blog_up.png) no-repeat left center;
 }
-/* line 63, ../sass/components/_menu.sass */
-.navbar-default .navbar-nav li.li-1434 {
+/* line 68, ../sass/components/_menu.sass */
+.navbar-default .navbar-nav li.li-1590 {
   background: transparent url(../images-source/about_dwn.png) no-repeat left center;
 }
-/* line 65, ../sass/components/_menu.sass */
-.navbar-default .navbar-nav li.li-1434:hover {
+/* line 70, ../sass/components/_menu.sass */
+.navbar-default .navbar-nav li.li-1590:hover {
   background: transparent url(../images-source/about_up.png) no-repeat left center;
 }
-/* line 67, ../sass/components/_menu.sass */
-.navbar-default .navbar-nav li.li-1145 {
+/* line 72, ../sass/components/_menu.sass */
+.navbar-default .navbar-nav li.li-1438 {
   background: transparent url(../images-source/sign_up.png) no-repeat left center;
 }
-/* line 69, ../sass/components/_menu.sass */
-.navbar-default .navbar-nav li.li-1145:hover {
+/* line 74, ../sass/components/_menu.sass */
+.navbar-default .navbar-nav li.li-1438:hover {
   background: transparent url(../images-source/sign_dwn.png) no-repeat left center;
 }
 
-/* line 80, ../sass/components/_menu.sass */
+/* line 86, ../sass/components/_menu.sass */
+header.navbar.navbar-default .nav.navbar-nav .last.li-1673 {
+  float: right;
+  background-color: #dbdbdb;
+  margin-right: 1px;
+  padding-right: 20px;
+}
+
+/* line 94, ../sass/components/_menu.sass */
+.header-right {
+  float: right;
+}
+@media only screen and (max-width: 600px) {
+  /* line 94, ../sass/components/_menu.sass */
+  .header-right {
+    width: 100%;
+    float: none;
+  }
+}
+
+/* line 100, ../sass/components/_menu.sass */
 #secondary-menu-links {
+  background: transparent;
+  align-content: right;
+  float: right;
+  margin-right: 30px;
+  font-size: 0.9em;
+}
+/* line 107, ../sass/components/_menu.sass */
+#secondary-menu-links li {
+  padding: 0px 0px 0 0px;
+  margin: 0 0px 0 13px;
+}
+/* line 110, ../sass/components/_menu.sass */
+#secondary-menu-links li a {
+  padding: 2px 0px 0 5px;
+}
+@media only screen and (max-width: 600px) {
+  /* line 100, ../sass/components/_menu.sass */
+  #secondary-menu-links {
+    width: 100%;
+    float: none;
+  }
+}
+
+/* line 2, ../sass/components/_search.sass */
+.search-form {
+  margin-bottom: 0;
   float: right;
 }
 
-/* line 4, ../sass/components/_search.sass */
+/* line 7, ../sass/components/_search.sass */
 #block-search-form, .search-form {
+  align-content: right;
   padding: 0 0 0 0;
 }
-/* line 6, ../sass/components/_search.sass */
+/* line 10, ../sass/components/_search.sass */
 #block-search-form .form-control, .search-form .form-control {
   display: inline-block;
+  vertical-align: top;
 }
-/* line 8, ../sass/components/_search.sass */
+/* line 13, ../sass/components/_search.sass */
 #block-search-form .form-submit, .search-form .form-submit {
-  margin-top: 0em;
   background: transparent url(../images-source/Search_Yellow.png) no-repeat left top;
   text-indent: -9999px;
-  margin: 17px 0 0 0;
+  margin: 0px 0 0 0;
   padding-right: 20px;
   font-size: 200%;
   border: none;
 }
-/* line 19, ../sass/components/_search.sass */
+/* line 24, ../sass/components/_search.sass */
 #block-search-form .form-submit:hover, .search-form .form-submit:hover {
   background: transparent url(../images-source/Search_Green.png) no-repeat left top;
 }
-/* line 22, ../sass/components/_search.sass */
+/* line 27, ../sass/components/_search.sass */
 #block-search-form .form-item input.form-text, #block-search-form .form-item textarea, .search-form .form-item input.form-text, .search-form .form-item textarea {
   border: none;
   background: #dbdbdb;
   height: 32px;
   width: 200px;
 }
-/* line 28, ../sass/components/_search.sass */
+/* line 33, ../sass/components/_search.sass */
 #block-search-form .compact-form-label, .search-form .compact-form-label {
   font-weight: normal;
   top: 6px;
 }
-
-/* line 35, ../sass/components/_search.sass */
-header #block-search-form, header .search-form {
-  float: right;
+@media only screen and (max-width: 600px) {
+  /* line 40, ../sass/components/_search.sass */
+  #block-search-form .form-submit, .search-form .form-submit {
+    float: none;
+  }
 }
 
 /* line 2, ../sass/components/_footer.sass */
@@ -208,7 +307,7 @@ header #block-search-form, header .search-form {
   padding: 10px 0 0 10px;
   margin: 0 0 1em 0;
   font-size: 1.1em;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #dbdbdb;
 }
 /* line 12, ../sass/components/_footer.sass */
@@ -217,15 +316,10 @@ header #block-search-form, header .search-form {
   width: 13%;
 }
 
-/* line 2, ../sass/components/_grid.sass */
-.view-opencivic-application-facet-search {
-  display: block;
-  margin-bottom: 40px;
-}
-/* line 5, ../sass/components/_grid.sass */
-.view-opencivic-application-facet-search .views-row {
+/* line 3, ../sass/components/_grid.sass */
+.oc-apps-grid .views-row {
   width: 32%;
-  height: 210px;
+  height: 240px;
   display: inline-block;
   vertical-align: top;
   border: 1px solid #c8c8c8;
@@ -235,103 +329,336 @@ header #block-search-form, header .search-form {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 18, ../sass/components/_grid.sass */
+/* line 15, ../sass/components/_grid.sass */
+.oc-apps-grid .views-row .views-field-field-oc-logo {
+  min-height: 100px;
+}
+/* line 17, ../sass/components/_grid.sass */
+.oc-apps-grid .views-row .thumbnail {
+  border: none;
+  margin-bottom: 0;
+}
+/* line 20, ../sass/components/_grid.sass */
+.oc-apps-grid .views-row .views-field-title {
+  font-size: 1.2em;
+}
+@media only screen and (max-width: 600px) {
+  /* line 24, ../sass/components/_grid.sass */
+  .oc-apps-grid .views-row {
+    width: 100%;
+  }
+}
+
+/* line 31, ../sass/components/_grid.sass */
+.view-opencivic-application-facet-search {
+  display: block;
+  margin-bottom: 40px;
+}
+/* line 3, ../sass/components/_grid.sass */
+.view-opencivic-application-facet-search .views-row {
+  width: 32%;
+  height: 240px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #c8c8c8;
+  padding: 5px;
+  margin: 0 5px 10px 0px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 15, ../sass/components/_grid.sass */
+.view-opencivic-application-facet-search .views-row .views-field-field-oc-logo {
+  min-height: 100px;
+}
+/* line 17, ../sass/components/_grid.sass */
+.view-opencivic-application-facet-search .views-row .thumbnail {
+  border: none;
+  margin-bottom: 0;
+}
+/* line 20, ../sass/components/_grid.sass */
 .view-opencivic-application-facet-search .views-row .views-field-title {
   font-size: 1.2em;
 }
+@media only screen and (max-width: 600px) {
+  /* line 24, ../sass/components/_grid.sass */
+  .view-opencivic-application-facet-search .views-row {
+    width: 100%;
+  }
+}
 
-/* line 24, ../sass/components/_grid.sass */
+/* line 43, ../sass/components/_grid.sass */
 .view-application-list .views-row,
 .view-deployments-list .views-row {
   margin-bottom: 20px;
 }
 
-/* line 29, ../sass/components/_grid.sass */
+/* line 48, ../sass/components/_grid.sass */
 .view-application-list .views-field-field-oc-logo {
   display: inline-block;
   margin-right: 10px;
   vertical-align: top;
 }
-/* line 33, ../sass/components/_grid.sass */
+/* line 52, ../sass/components/_grid.sass */
 .view-application-list .group {
   display: inline-block;
   width: 80%;
 }
 
-/* line 39, ../sass/components/_grid.sass */
+/* line 3, ../sass/components/_grid.sass */
+.view-display-id-panel_pane_4 .views-row {
+  width: 32%;
+  height: 240px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #c8c8c8;
+  padding: 5px;
+  margin: 0 5px 10px 0px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 15, ../sass/components/_grid.sass */
+.view-display-id-panel_pane_4 .views-row .views-field-field-oc-logo {
+  min-height: 100px;
+}
+/* line 17, ../sass/components/_grid.sass */
+.view-display-id-panel_pane_4 .views-row .thumbnail {
+  border: none;
+  margin-bottom: 0;
+}
+/* line 20, ../sass/components/_grid.sass */
+.view-display-id-panel_pane_4 .views-row .views-field-title {
+  font-size: 1.2em;
+}
+@media only screen and (max-width: 600px) {
+  /* line 24, ../sass/components/_grid.sass */
+  .view-display-id-panel_pane_4 .views-row {
+    width: 100%;
+  }
+}
+
+/* line 64, ../sass/components/_grid.sass */
+.view-deployments-list .views-field-title-field .field-content {
+  display: inline-block;
+}
+
+/* line 68, ../sass/components/_grid.sass */
 .view-story .views-field-title {
   font-size: 1.5em;
 }
 
-/* line 44, ../sass/components/_grid.sass */
-.view-ec-tweets .table, .view-ec-tweets tbody {
-  border: none;
+/* line 72, ../sass/components/_grid.sass */
+.view-ec-tweets .views-row {
+  margin-bottom: 15px;
 }
-/* line 46, ../sass/components/_grid.sass */
-.view-ec-tweets .table tr, .view-ec-tweets .table td, .view-ec-tweets tbody tr, .view-ec-tweets tbody td {
-  border: none;
-}
-
-/* line 63, ../sass/components/_grid.sass */
-.view-story.view-display-id-panel_pane_2 {
-  margin-bottom: 30px;
-}
-/* line 65, ../sass/components/_grid.sass */
-.view-story.view-display-id-panel_pane_2 .views-row {
-  width: 32%;
+/* line 74, ../sass/components/_grid.sass */
+.view-ec-tweets .views-field-profile-image-url {
   display: inline-block;
-  margin-right: 15px;
+  width: 17%;
   vertical-align: top;
 }
-/* line 70, ../sass/components/_grid.sass */
-.view-story.view-display-id-panel_pane_2 .ec-recent-story {
+/* line 78, ../sass/components/_grid.sass */
+.view-ec-tweets .views-field-text {
+  display: inline-block;
+  width: 80%;
+}
+/* line 81, ../sass/components/_grid.sass */
+.view-ec-tweets .views-field-created-time {
+  display: inline-block;
+}
+/* line 84, ../sass/components/_grid.sass */
+.view-ec-tweets .views-field-created-time .field-content {
+  text-align: right;
+}
+
+/* line 88, ../sass/components/_grid.sass */
+.story-three-col-grid {
+  margin-bottom: 30px;
+}
+/* line 90, ../sass/components/_grid.sass */
+.story-three-col-grid .views-row {
+  width: 32.3%;
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-right: 0.6%;
+  vertical-align: top;
+}
+/* line 97, ../sass/components/_grid.sass */
+.story-three-col-grid .ec-recent-story {
   float: none;
   max-width: 100%;
   width: 100%;
   margin-bottom: 14px;
 }
+@media only screen and (max-width: 600px) {
+  /* line 103, ../sass/components/_grid.sass */
+  .story-three-col-grid .views-row {
+    width: 100%;
+  }
+}
 
-/* line 2, ../sass/components/_widgets.sass */
+/* line 106, ../sass/components/_grid.sass */
+.view-civic-exchange-sectors {
+  margin-bottom: 20px;
+}
+/* line 108, ../sass/components/_grid.sass */
+.view-civic-exchange-sectors .views-row {
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px 0px 50px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/* line 117, ../sass/components/_grid.sass */
+.view-civic-exchange-sectors .views-row .views-field-field-oc-icon {
+  margin: 0 auto;
+}
+/* line 119, ../sass/components/_grid.sass */
+.view-civic-exchange-sectors .views-row .views-field-name {
+  font-size: 1.2em;
+}
+/* line 121, ../sass/components/_grid.sass */
+.view-civic-exchange-sectors .views-row img {
+  width: 40%;
+  height: 40%;
+  margin: 0 auto;
+  width: 50%;
+}
+/* line 129, ../sass/components/_grid.sass */
+.view-civic-exchange-sectors .views-row a {
+  margin: 0 auto;
+  width: 50%;
+}
+/* line 134, ../sass/components/_grid.sass */
+.view-civic-exchange-sectors .views-row .field-content {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 599px) {
+  /* line 168, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 .table {
+    margin: 10px;
+  }
+  /* line 170, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 .table-bordered > thead > tr > th, .pane-organization-list-panel-pane-1 .table-bordered > thead > tr > td, .pane-organization-list-panel-pane-1 .table-bordered > tbody > tr > th, .pane-organization-list-panel-pane-1 .table-bordered > tbody > tr > td {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    padding: 8px 8px 8px 30%;
+    white-space: normal;
+    text-align: left;
+    min-height: 1.5em;
+    word-wrap: break-word;
+  }
+  /* line 181, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 .table-bordered > thead {
+    display: none;
+  }
+
+  /* line 184, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 5px;
+    left: 6px;
+    line-height: 1.25em;
+    width: 25%;
+    padding-right: 10px;
+    white-space: normal;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  /* line 199, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 td:nth-of-type(1):before {
+    content: "Organisation";
+  }
+  /* line 201, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 td:nth-of-type(2):before {
+    content: "Date added";
+  }
+  /* line 203, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 td:nth-of-type(3):before {
+    content: "Civic sector";
+  }
+  /* line 205, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 td:nth-of-type(4):before {
+    content: "Address";
+  }
+  /* line 207, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 td:nth-of-type(5):before {
+    content: "Telephone";
+  }
+  /* line 209, ../sass/components/_grid.sass */
+  .pane-organization-list-panel-pane-1 td:nth-of-type(6):before {
+    content: "Website";
+  }
+}
+/* line 216, ../sass/components/_grid.sass */
+.view-civic-exchange-editors .views-row {
+  margin-bottom: 20px;
+}
+
+/* line 3, ../sass/components/_widgets.sass */
 .pane-service-links {
   padding-bottom: 15px;
 }
-/* line 4, ../sass/components/_widgets.sass */
+/* line 5, ../sass/components/_widgets.sass */
 .pane-service-links h2 {
   font-size: 20px;
 }
-/* line 6, ../sass/components/_widgets.sass */
+/* line 7, ../sass/components/_widgets.sass */
 .pane-service-links ul {
   list-style-type: none;
 }
-/* line 9, ../sass/components/_widgets.sass */
+/* line 10, ../sass/components/_widgets.sass */
 .pane-service-links ul li {
   margin: 0 5px 0 0;
   display: inline-block;
 }
 
-/* line 16, ../sass/components/_widgets.sass */
+/* line 17, ../sass/components/_widgets.sass */
 .front .panel-pane .pane-title {
   color: black;
   background-color: #f9e829;
   padding: 3px 0 3px 5px;
 }
 
-/* line 26, ../sass/components/_widgets.sass */
+/* line 27, ../sass/components/_widgets.sass */
 #mini-panel-ec_homepage_banner .inside {
   margin: 0 0 0 0;
 }
 
-/* line 29, ../sass/components/_widgets.sass */
+@media only screen and (max-width: 600px) {
+  /* line 31, ../sass/components/_widgets.sass */
+  .pane-ec-homepage-banner {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 31, ../sass/components/_widgets.sass */
+  .pane-ec-homepage-banner {
+    display: none;
+  }
+}
+
+/* line 39, ../sass/components/_widgets.sass */
 .page-frontpage .pane-title {
   background-color: #f9e829;
   padding-left: 5px;
   margin-bottom: 25px;
 }
-/* line 33, ../sass/components/_widgets.sass */
+/* line 43, ../sass/components/_widgets.sass */
 .page-frontpage .block-content {
   padding-left: 5px;
 }
-/* line 36, ../sass/components/_widgets.sass */
+/* line 46, ../sass/components/_widgets.sass */
 .page-frontpage .row-action {
   background-image: url(../images-source/action_panel_background.png);
   background-position: 10px 0px;
@@ -339,22 +666,25 @@ header #block-search-form, header .search-form {
   padding: 40px 0;
   margin-bottom: 25px;
 }
-/* line 43, ../sass/components/_widgets.sass */
+/* line 53, ../sass/components/_widgets.sass */
 .page-frontpage #welcome-box {
   background-image: url(../images-source/action_panel_background.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
   background-size: 100%;
+  width: 367px;
   height: 330px;
   padding-top: 20px;
 }
-/* line 50, ../sass/components/_widgets.sass */
+/* line 61, ../sass/components/_widgets.sass */
 .page-frontpage .welcome-box {
-  background-color: #f9e829;
+  background-color: #dbdbdb;
   padding: 15px;
-  margin: 15px;
+  max-height: 260px;
+  height: 260px;
+  border-left: 5px solid #f9e829;
 }
-/* line 55, ../sass/components/_widgets.sass */
+/* line 69, ../sass/components/_widgets.sass */
 .page-frontpage .welcome-msg {
   color: black;
   font-size: 1.9em;
@@ -362,11 +692,11 @@ header #block-search-form, header .search-form {
   margin: 0 0 0.7em 0;
   line-height: 1.1em;
 }
-/* line 62, ../sass/components/_widgets.sass */
+/* line 76, ../sass/components/_widgets.sass */
 .page-frontpage .welcome-msg-slogan {
   font-size: 1.4em;
 }
-/* line 67, ../sass/components/_widgets.sass */
+/* line 81, ../sass/components/_widgets.sass */
 .page-frontpage .welcome-button {
   color: black;
   background-color: white;
@@ -375,15 +705,78 @@ header #block-search-form, header .search-form {
   margin: 0px;
   padding: 0 5px;
 }
-/* line 77, ../sass/components/_widgets.sass */
+/* line 91, ../sass/components/_widgets.sass */
 .page-frontpage .welcome-main {
   font-size: 1.4em;
 }
-/* line 78, ../sass/components/_widgets.sass */
+/* line 92, ../sass/components/_widgets.sass */
 .page-frontpage .welcome-main h1 {
   font-size: 1.7em;
   color: black;
   margin-top: 0;
+}
+@media only screen and (max-width: 600px) {
+  /* line 99, ../sass/components/_widgets.sass */
+  .page-frontpage .welcome-main {
+    display: none;
+  }
+}
+
+/* line 107, ../sass/components/_widgets.sass */
+#mini-panel-ec_homepage_banner_2 .burr-flipped-main-content {
+  padding-left: 0px;
+}
+/* line 109, ../sass/components/_widgets.sass */
+#mini-panel-ec_homepage_banner_2 .burr-flipped-sidebar-content {
+  padding-right: 0px;
+}
+
+/* line 113, ../sass/components/_widgets.sass */
+.view-opencivic-highlight .highlight-text {
+  position: absolute;
+  display: inline-block;
+  max-width: 80%;
+  bottom: -5px;
+  background-color: white;
+  padding: 5px;
+}
+/* line 121, ../sass/components/_widgets.sass */
+.view-opencivic-highlight .highlight-title {
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px;
+}
+/* line 128, ../sass/components/_widgets.sass */
+.view-opencivic-highlight .highlight-summary {
+  font-size: 18px;
+  display: inline-block;
+  padding: 5px 5px 5px 0;
+}
+@media only screen and (max-width: 600px) {
+  /* line 136, ../sass/components/_widgets.sass */
+  .view-opencivic-highlight .highlight-text {
+    position: relative;
+    padding: 0px;
+  }
+  /* line 139, ../sass/components/_widgets.sass */
+  .view-opencivic-highlight .highlight-title {
+    padding-left: 0px;
+  }
+}
+
+/* line 143, ../sass/components/_widgets.sass */
+.header-top-line-right {
+  margin-top: 5px;
+}
+
+/* line 146, ../sass/components/_widgets.sass */
+.media-icons {
+  display: inline-block;
+  float: right;
+}
+/* line 149, ../sass/components/_widgets.sass */
+.media-icons .fa-rss {
+  margin-right: 8px;
 }
 
 /* line 8, ../sass/includes/_layout.sass */
@@ -393,4 +786,8 @@ header #block-search-form, header .search-form {
 /* line 11, ../sass/includes/_layout.sass */
 .front #top-content {
   height: 0;
+}
+
+@-ms-viewport {
+  width: device-width;
 }

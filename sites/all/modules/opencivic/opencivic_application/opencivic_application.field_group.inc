@@ -30,6 +30,7 @@ function opencivic_application_field_group_info() {
       4 => 'field_oc_app_feature_list',
       5 => 'field_oc_logo',
       6 => 'field_oc_app_url',
+      7 => 'field_oc_app_context',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -54,11 +55,11 @@ function opencivic_application_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '20',
+    'weight' => '21',
     'children' => array(
       0 => 'field_oc_app_category',
-      1 => 'field_oc_civic_category',
-      2 => 'field_oc_tags',
+      1 => 'field_oc_tags',
+      2 => 'field_oc_civic_category',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -71,6 +72,34 @@ function opencivic_application_field_group_info() {
     ),
   );
   $export['group_categories|node|oc_application|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_impact|node|oc_application|form';
+  $field_group->group_name = 'group_impact';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'oc_application';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_main';
+  $field_group->data = array(
+    'label' => 'Impact',
+    'weight' => '20',
+    'children' => array(
+      0 => 'field_oc_app_impact',
+      1 => 'field_oc_app_cost',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-impact field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_impact|node|oc_application|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -90,6 +119,7 @@ function opencivic_application_field_group_info() {
       2 => 'group_media',
       3 => 'group_related',
       4 => 'group_technical',
+      5 => 'group_impact',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -112,7 +142,7 @@ function opencivic_application_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Media',
-    'weight' => '21',
+    'weight' => '22',
     'children' => array(
       0 => 'field_oc_file_attachments',
       1 => 'field_oc_app_screenshot',
@@ -141,7 +171,7 @@ function opencivic_application_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Related content',
-    'weight' => '23',
+    'weight' => '24',
     'children' => array(
       0 => 'field_oc_app_related_apps',
     ),
@@ -168,13 +198,14 @@ function opencivic_application_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Technical info',
-    'weight' => '22',
+    'weight' => '23',
     'children' => array(
       0 => 'field_oc_app_download_url',
       1 => 'field_oc_app_install_url',
       2 => 'field_oc_app_license',
       3 => 'field_oc_app_requirements',
       4 => 'field_oc_app_software_type',
+      5 => 'field_oc_app_maintenance_support',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

@@ -180,6 +180,61 @@ function opencivic_application_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-oc_application-field_oc_app_context'
+  $field_instances['node-oc_application-field_oc_app_context'] = array(
+    'bundle' => 'oc_application',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Why was the app created? What issues was it designed to tackle?',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 26,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_oc_app_context',
+    'label' => 'Context',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'label_help_description' => '',
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-oc_application-field_oc_app_contributor'
   $field_instances['node-oc_application-field_oc_app_contributor'] = array(
     'bundle' => 'oc_application',
@@ -235,7 +290,62 @@ function opencivic_application_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-oc_application-field_oc_app_cost'
+  $field_instances['node-oc_application-field_oc_app_cost'] = array(
+    'bundle' => 'oc_application',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'What information is available about the costs of implementation and maintenance?',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 28,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_oc_app_cost',
+    'label' => 'Cost',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'label_help_description' => '',
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 25,
     ),
   );
 
@@ -424,7 +534,7 @@ function opencivic_application_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 16,
+      'weight' => 29,
     ),
   );
 
@@ -483,6 +593,61 @@ function opencivic_application_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-oc_application-field_oc_app_impact'
+  $field_instances['node-oc_application-field_oc_app_impact'] = array(
+    'bundle' => 'oc_application',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'What impact has the app or service had? What data is available regarding usage, cost-savings etc? What user feedback has there been?',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 27,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_oc_app_impact',
+    'label' => 'Impact',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'label_help_description' => '',
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 24,
     ),
   );
 
@@ -554,7 +719,7 @@ function opencivic_application_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 17,
+      'weight' => 30,
     ),
   );
 
@@ -606,7 +771,62 @@ function opencivic_application_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_buttons',
-      'weight' => 14,
+      'weight' => 26,
+    ),
+  );
+
+  // Exported field_instance: 'node-oc_application-field_oc_app_maintenance_support'
+  $field_instances['node-oc_application-field_oc_app_maintenance_support'] = array(
+    'bundle' => 'oc_application',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'What support options are available for the app or service? And what are the ongoing maintenance requirements?',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 29,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_oc_app_maintenance_support',
+    'label' => 'Maintenance & support',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'label_help_description' => '',
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 28,
     ),
   );
 
@@ -721,13 +941,14 @@ function opencivic_application_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 15,
+      'weight' => 27,
     ),
   );
 
   // Exported field_instance: 'node-oc_application-field_oc_app_screenshot'
   $field_instances['node-oc_application-field_oc_app_screenshot'] = array(
     'bundle' => 'oc_application',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'Screenshot images of the app.',
     'display' => array(
@@ -775,14 +996,14 @@ function opencivic_application_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'multiupload_imagefield_widget',
       'settings' => array(
         'label_help_description' => '',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'image_miw',
       'weight' => 5,
     ),
   );
@@ -835,7 +1056,7 @@ function opencivic_application_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_buttons',
-      'weight' => 13,
+      'weight' => 25,
     ),
   );
 
@@ -1383,17 +1604,21 @@ function opencivic_application_field_default_field_instances() {
   t('Application function');
   t('Civic sector');
   t('Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).');
+  t('Context');
+  t('Cost');
   t('Demo url');
   t('Enter the URL of the application homepage where people can go to find more information');
   t('File attachments');
   t('Host');
   t('Icon');
   t('If the software can be downloaded, URL to download it.');
+  t('Impact');
   t('Important features provided by this application (and possibly required by other applications).');
   t('Is the software a binary such as a .exe, like MS Word? Is it SaaS (Software as a Service), provided by a hosted or cloud service like Google Apps? Is it an open source scripting language like a PHP app?');
   t('Key features');
   t('License');
   t('Logo');
+  t('Maintenance & support');
   t('Rating');
   t('Related applications');
   t('Requirements');
@@ -1415,7 +1640,11 @@ function opencivic_application_field_default_field_instances() {
   t('What civic purpose does this application serve, e.g., education, elections?');
   t('What do you think of the application? Is it easy to use? Is it easy to implement? (Your rating will be aggregated with others).');
   t('What does the application do? What should people know about the application?');
+  t('What impact has the app or service had? What data is available regarding usage, cost-savings etc? What user feedback has there been?');
+  t('What information is available about the costs of implementation and maintenance?');
+  t('What support options are available for the app or service? And what are the ongoing maintenance requirements?');
   t('Which vendors provide support for this app? To add a vendor, start typing a vendor name into the field, and if that vendor is already in our system, and it should autocomplete. If the vendor is not already in our system, use the "+ Create Organization" button to add a vendor.');
+  t('Why was the app created? What issues was it designed to tackle?');
 
   return $field_instances;
 }
